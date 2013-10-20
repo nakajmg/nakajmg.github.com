@@ -3,9 +3,13 @@
 
 $img__bg-noise: "../img/bg_noise_3.png";
 $img__author: "../img/author.png";
+$breakpoint__smartphone: 400px;
 * {
     margin: 0;
     padding: 0;
+}
+html{
+    font-size: 62.5%;
 }
 body{
     height: 100%;
@@ -26,8 +30,15 @@ body{
     background-color: #333333;
     padding: 1em 0 1.5em;
     background-image: url($img__bg-noise);
+    font-size: 1.7em;
     // border-top: 1px solid #434EA2;
     // @include box-shadow(0 0 1px 1px rgba(0, 0, 0, .4));
+    a{
+        text-decoration: none;
+        color: inherit;
+        &:visited{ color: inherit; }
+        &:link{ color: inherit; }
+    }
     &:before{
         content: "";
         height: 5px;
@@ -38,6 +49,10 @@ body{
         top: 0;
         background-image: url($img__bg-noise);
     }
+    @media screen and (max-width:$breakpoint__smartphone){
+        padding: 0;
+    }
+
 }
     .global-header__title{
         font-family: 'Outage', sans-serif;
@@ -47,12 +62,11 @@ body{
         // color: #FFFFFF;
         color: #EEEEEE;
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
-        a{
-            text-decoration: none;
-            color: inherit;
-            &:visited{ color: inherit; }
-            &:link{ color: inherit; }
+        @media screen and (max-width:$breakpoint__smartphone){
+            font-size: 3em;
+            padding: .2em 0 0;
         }
+
     }
 
 .global-footer{
@@ -65,6 +79,10 @@ body{
     color: #eee;
     @include box-sizing(border-box);
     @include box-shadow(0px 1px 1px 1px rgba(0, 0, 0, 0.4));
+
+    @media screen and (max-width:$breakpoint__smartphone){
+        text-align: center;
+    }
 }
 .icon__author{
     background-image: url($img__author);
@@ -81,23 +99,30 @@ body{
     @include box-shadow(inset 0 0 0 1px rgba(0, 0, 0, .2));
 }
     .global-footer__title{
+        font-size: 2.5rem;
         padding-bottom: 20px;
     }
     .global-footer__author{
+        font-size: 1.5rem;
         display: inline-block;
         vertical-align: middle;
         line-height: 2.2;
+        @media screen and (max-width:$breakpoint__smartphone){
+            font-size: 1.1rem;
+            margin: 15px auto 0;
+            text-align: left;
+        }
     }
     .global-footer__contact{
-        font-size: 16px;
+        font-size: 1.6rem;
         // color: #F0F0F0;
         color: #AAAAAA;
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.4);
         margin-top: 40px;
         padding-top: 10px;
         padding-bottom: 10px;
-        border-top: 1px solid rgba(255,255,255,.2);
-        @include box-shadow(0 -1px 0 0 rgba(0,0,0,0.6));
+        border-top: 1px solid rgba(255,255,255,.1);
+        @include box-shadow(0 -1px 0 0 rgba(0,0,0,.2));
         a{
             color: #F0F0F0;
             text-decoration: none;
@@ -112,24 +137,58 @@ body{
             vertical-align: middle;
         }
     }
+        .global-footer__contact-list{
+            margin:0;
+            text-align: center;
+            list-style: none;
+            li{
+                display: inline-block;
+                @media screen and (max-width:$breakpoint__smartphone){
+                    display: block;
+                    text-align: center;
+                    margin: 5px 0;
+                    padding: 5px;
+                    border: 1px solid rgba(0,0,0,.1);
+                    background-color: rgba(30,30,30,.1);
+                }
+               a{
+                    display: inline-block;
+                }
+            }
+        }
 .content-wrapper{
-    padding: 50px 15px;
+    padding: 30px 15px;
     line-height: 1.5;
+    margin: 15px;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    @include box-shadow(0 0 0 1px rgba(160,160,160,.1));
 }
 .entry-list{
     list-style: none;
 }
     .entry-list__item{
-        margin-bottom: 30px;
+        font-size: 3.0rem;
+        @media screen and (max-width:$breakpoint__smartphone){
+            font-size: 1.8rem;
+            line-height: 1;
+            a{
+                display: inline-block;
+            }
+        }
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        @include box-shadow(0 1px 0 0 #FFF);
     }
         .entry-list__item__title{
-            font-size: 30px;
+            font-size: 1em;
             color: #333333;
             text-decoration: none;
             &:hover{ text-decoration: underline; }
         }
         .entry-list__item__date{
-            font-size: 0.9em;
+            font-size: 0.5em;
             color: #666666;
             margin-right: 10px;
         }

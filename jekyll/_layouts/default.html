@@ -15,7 +15,9 @@
     <body>
         <main class="global-wrapper">
           <header class="global-header">
-            <h1 class="global-header__title"><a href="/">{{ site.name }}</a></h1>
+            <a href="/">
+              <h1 class="global-header__title">{{ site.name }}</h1>
+            </a>
           </header>
             <div  class="content-wrapper">
               {{ content }}
@@ -24,20 +26,20 @@
             <div class="global-footer__content">
               <h3 class="global-footer__title">Author</h3>
               <i class="icon__author"></i>
-              <p class="global-footer__author">
-                中島直博（なかじまなおひろ）/ nakajmg（じまぐ）<br />
-                フロントエントエンジニア。スマホ向けブラウザゲーム作ってます。<br />
-                埼玉出身の豊島ボーイ。
-              </p>
+              <div class="global-footer__author">
+                <p>中島直博（なかじまなおひろ）/ nakajmg（じまぐ）
+                <p>フロントエントエンジニア。スマホ向けブラウザゲーム作ってます。
+                <p>埼玉出身の豊島ボーイ。
+              </div>
             </div>
             <div class="global-footer__contact">
-              <p>
-                <i class="icon-twitter"></i><a href="https://twitter.com/nakajmg">nakajmg@Twitter</a>
-                <i class="icon-github-alt"></i><a href="https://github.com/nakajmg">nakajmg@Github</a>
-                <i class="icon-html5"></i><a href="http://qiita.com/nakajmg">nakajmg@Qiita</a>
+              <ul class="global-footer__contact-list">
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/nakajmg">nakajmg@Twitter</a>
+                <li><i class="icon-github-alt"></i><a href="https://github.com/nakajmg">nakajmg@Github</a>
+                <li><i class="icon-html5"></i><a href="http://qiita.com/nakajmg">nakajmg@Qiita</a>
 <!--                 <a href="https://github.com/yourusername">github.com/yourusername</a><br />
                 <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br /> -->
-              </p>
+              </ul>
             </div>
           </footer>
         </main>
