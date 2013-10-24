@@ -12,9 +12,8 @@ categories: 雑記 Jekyll
 
 テーマカラーの緑はQiitaの色をパクパク。  
 
-やっぱりMarkdowで書けるのが楽。  
-Bloggerで書いてたときはMDからST2のプラギンでHTML
-に変換してからスタイル調整とかやって時間かかってた。
+やっぱりMarkdownで書けるのが楽。  
+Bloggerで書いてたときはMDからST2のプラギンでHTMLに変換してからスタイル調整とかやって時間かかってた。
 
 あとは
 
