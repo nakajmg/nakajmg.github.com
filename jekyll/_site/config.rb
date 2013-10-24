@@ -8,8 +8,8 @@ images_dir = "img"
 javascripts_dir = "js"
 fonts_dir = "font"
 
-enviroment = :development
-# enviroment = :production
+# enviroment = :development
+enviroment = :production
 
 if enviroment == :development
     output_style = :expanded

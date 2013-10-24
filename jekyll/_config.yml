@@ -1,3 +1,6 @@
 name: JMGTECH
 markdown: redcarpet
 pygments: true
+paginate: 10
+permalink: /blog/:year-:month-:day/:title.html
+category: true
