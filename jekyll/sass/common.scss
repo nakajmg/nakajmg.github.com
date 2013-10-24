@@ -20,7 +20,7 @@ body{
     // border-top: 8px solid #515892;
     // border-bottom: 30px solid #515892;
     // background-color: #F5F5F5;
-    background-color: $color__site;
+    // background-color: $color__site;
     background-image: url($img__bg-noise);
     color: #333;
     background-color: #333333;
@@ -33,12 +33,10 @@ a{
     &:hover{ color: #005A81; text-decoration: none;}
 }
 .global-wrapper{
-    // width: 320px;
-    background-color: #F5F5F5;
+    background-color: #F5F5F5 !imporant;
 }
 .global-header{
     width: 100%;
-    // background-color: #333333;
     padding: 1em 0 0;
     background-image: url($img__bg-noise);
     font-size: 1.7em;
