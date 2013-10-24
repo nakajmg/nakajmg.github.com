@@ -192,10 +192,11 @@ a{
 .content-wrapper{
     padding: 30px 15px;
     line-height: 1.5;
-    background-color: #FBFBFB;
+    // background-color: #FBFBFB;
+    background-color: #F8F8F8;
+    // @include box-shadow(0 0 0 1px rgba(76, 255, 119, 0.1));
     border-radius: 2px;
     min-height: 240px;
-    @include box-shadow(0 0 0 1px rgba(160,160,160,.1));
     @include box-sizing(border-box);
     max-width:760px;
     margin: 15px auto;
