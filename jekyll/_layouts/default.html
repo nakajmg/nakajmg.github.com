@@ -5,6 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
+<!-- OGPtoka -->
+
+        <meta property="og:description" content="{{ page.content | markdownify | strip_html | strip_newlines | truncate: 50}}" />
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:type" content="website" />
+        {% if page.url %}
+          <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+        {% endif %}
+        <meta property="og:site_name" content="{{ site.name }}" />
+        <meta property="og:image" content="{{ site.url }}/img/ogp_icon.png" />
+        {% if page.date %}
+          <meta property="article:published_time" content="{{page.date | date: "%Y-%m-%d" }}" />
+        {% endif %}
+
+<!-- OGPtoka -->
+
+
         <link rel="stylesheet" href="/css/syntax.css">
         <link rel="stylesheet" href="/css/common.css">
         <link rel="stylesheet" href="/css/font-awesome.css">

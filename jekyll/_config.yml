@@ -1,6 +1,8 @@
-name: JMGTECH
+name: じまぐてっく
 markdown: redcarpet
 pygments: true
 paginate: 10
 permalink: /blog/:year-:month-:day/:title.html
 category: true
+exclude: ['sass']
+url: https://nakajmg.github.io
