@@ -53,6 +53,13 @@ module.exports = function(grunt) {
     //     command: 'jekyll serve --watch &'
     //   }
     // },
+    jekyll: {
+      publish: {
+        options: {
+          server: false
+        }
+      }
+    },
     csso: {
       publish: {
         files: {
@@ -95,9 +102,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-growl');
+  grunt.loadNpmTasks('grunt-jekyll');
+
 
   grunt.registerTask('default',['connect','watch']);
-  grunt.registerTask('develop',['compass']);
-  grunt.registerTask('publish',['copy:publish','growl:publish']);
+  grunt.registerTask('develop',['csso']);
+  grunt.registerTask('publish',['csso','jekyll','copy:publish','growl:publish']);
 
 };

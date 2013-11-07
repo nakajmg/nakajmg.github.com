@@ -2,9 +2,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     copy: {
         publish: {
-            files: [{
-                src: ['_site/js/**','_site/css/**','_site/blog/**','_site/img/**','_site/index.html'], dest: '../'
-            }]
+            files: [
+              { src: ['js/**','css/**','blog/**/*.html','img/**','*.html'], dest: '../', cwd: '_site/', expand: true }
+            ]
         },
         dev: {
           files: [
@@ -53,17 +53,24 @@ module.exports = function(grunt) {
     //     command: 'jekyll serve --watch &'
     //   }
     // },
-    // csso: {
-    //   publish: {
-    //     files: {
-    //       './_site/css/common.min.css': ['./_site/css/common.css']
-    //     }
-    //   }
-    // },
+    jekyll: {
+      publish: {
+        options: {
+          server: false
+        }
+      }
+    },
+    csso: {
+      publish: {
+        files: {
+          './css/common.min.css': ['./css/common.css']
+        }
+      }
+    },
     watch: {
         dist: {
             files: ['sass/*.scss'],
-            tasks: ['compass:dist'],
+            tasks: ['compass:dist','csso:publish'],
             options: {
                 livereload: false
             }
@@ -95,9 +102,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-csso');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-growl');
+  grunt.loadNpmTasks('grunt-jekyll');
+
 
   grunt.registerTask('default',['connect','watch']);
-  grunt.registerTask('develop',['compass']);
-  grunt.registerTask('publish',['csso:publish','copy:publish','growl:publish']);
+  grunt.registerTask('develop',['csso']);
+  grunt.registerTask('publish',['csso','jekyll','copy:publish','growl:publish']);
 
 };
