@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>マークアップの最適解はまだ見えない</title>
+        <meta name="viewport" content="width=device-width">
+<!-- OGPtoka -->
+
+        <meta property="og:description" content="HTML5 Experts.jpにマークアップについて書いた記事を起稿しました。続・よくある3..." />
+        <meta property="og:title" content="マークアップの最適解はまだ見えない" />
+        <meta property="og:type" content="website" />
+        
+          <meta property="og:url" content="http://nakajmg.github.io/blog/2013-11-09/markupcafe2.html" />
+        
+        <meta property="og:site_name" content="じまぐてっく" />
+        <meta property="og:image" content="http://nakajmg.github.io/img/tech.png" />
+        
+          <meta property="article:published_time" content="2013-11-09" />
+        
+
+<!-- OGPtoka -->
+
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/common.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+    </head>
+    <body>
+        <main class="global-wrapper">
+          <header class="global-header">
+            <a href="/">
+              <!-- <h1 class="global-header__title">JMGTECH</h1> -->
+              <h1 class="global-header__title">JMG<span class="logo--tech"></span>TECH</h1>
+            </a>
+          </header>
+          <nav class="global-nav">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+          </nav>
+            <div  class="content-wrapper">
+              <article class="content">
+    <header class="content-header">
+        <h2 class="content-title">マークアップの最適解はまだ見えない</h2>
+        <p class="content-date">2013-11-09</p>
+    </header>
+
+    <p><a href="http://html5experts.jp/">HTML5 Experts.jp</a>にマークアップについて書いた記事を起稿しました。</p>
+
+<h4><a href="http://html5experts.jp/nakajmg/3225/">続・よくある3つのデザインから考える、マークアップの最適解</a></h4>
+
+<p>「続」とついてるのは<a href="http://html5experts.jp/nakajmg/2502/">1つ前に起稿した記事</a>と同じく「<a href="http://atnd.org/events/43774">MarkupCafe</a>」からの内容なため。</p>
+
+<h3>MarkupCafeについて</h3>
+
+<p>MarkupCafeは<a href="http://html5j.org/">html5j</a>のマークアップ部の取り組みの一つで、お題となるデザインに対してグループワーク的な感じでマークアップを考えるイベント。</p>
+
+<p>対象が</p>
+
+<ul>
+<li>Webデザイナー</li>
+<li>Webプログラマー</li>
+<li>HTMLマークアップ初心者</li>
+</ul>
+
+<p>となってるんだけど、毎回すっごく詳しい人が紛れてて「そんなやり方があるのか…」と思わせるマークアップが出てくる。</p>
+
+<p>このイベントの形式はイベントじゃなくてもできることなので、近くの人を集めてやってもかなり面白いと思う。<br>
+オフラインで集まらなくても<a href="http://jsdo.it/">jsdo.it</a>のようなサービスを使ってソーシャル上でやってもいい。 </p>
+
+<p>最初は「マークアップ大喜利」みたいなちょっと軽いノリにしたら盛り上がりそう。</p>
+
+<h2>マークアップについて思うこと</h2>
+
+<p>個人的に思ったこと。</p>
+
+<p>前回のMarkupCafe#1では<code>nav</code>、<code>article</code>、<code>section</code>、<code>address</code>なんかの、使いどころ自体が難しい要素に焦点を当てていたと思う。 
+今回は使い方とか具体的なことじゃなく、アクセシビリティとかユーザビリティっつーポイントに焦点を当てていたように感じた。 </p>
+
+<p>参加者が特に意識してたと思ったのは「スクリーンリーダ」など音声による読み上げ。<br>
+「読み上げる際にノイズとなるものは擬似要素で追加する」とか、フォームでは「注意事項は入力項目の前に置く」とか。</p>
+
+<p>あと今回のイベントでは今まで自分になかった考え方が色々あって尊敬に近いものを感じた。</p>
+
+<h4>&quot;デザイン的に先にあるからといって順番通りにマークアップしなくてもいいんじゃない？&quot;</h4>
+
+<p>この考え方はかなり衝撃というか軽い感動を覚えた。<br>
+そもそもHTMLは文書構造を表すためのもので、見た目はCSSでというのが今の原則なはずだ。
+そう考えるとこの考えもかなり合点がいくというか、むしろ当たり前にすら感じてしまう。</p>
+
+<p>ただCSSでスタイルをつけるにしても、今のHTMLとCSSの機能的には順番通りにマークアップするほうが色々と早い。</p>
+
+<script type="text/javascript" src="http://jsdo.it/blogparts/eQ0R/js?width=465&height=200&view=html"></script>
+
+<p>Flexboxが普通に使えるようになれば、あるチーム(というかmyakuraさん)がやってたように見た目と構造の分離をもっと意識したマークアップが主流になるのかなーとうすーく思ってる。</p>
+
+<h2>最適解はまだ見えないけど</h2>
+
+<p>マークアップを綺麗にちゃんと(セマンティックに)書く理由って&quot;マシンリーダブル&quot;にして検索エンジンにちゃんと解析してもらうとか、文書を再利用しやすくするっていう観点からだと思ってたけど、&quot;アクセシビリティ&quot;っていう軸も大事だなと。  </p>
+
+<p>ダレのためのアクセシビリティかは時と場合によるけど、そのときに一番合ったマークアップができるようにちゃんと勉強しておけばいいんじゃないかな。</p>
+
+
+    <div class="social-btns">
+    <a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://nakajmg.github.io/blog/2013-11-09/markupcafe2.html" data-text="マークアップの最適解はまだ見えない | じまぐてっく">Tweet</a>
+    <div class="fb-like" data-href="http://nakajmg.github.io/blog/2013-11-09/markupcafe2.html" data-send="false" data-layout="button_count" data-width="118" data-show-faces="true"></div>
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加" ><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    <div class="g-plusone" data-size="medium"></div>
+    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/jquery.socialthings.min.js"></script>
+<script>
+
+$(function(){
+    $.socialthings.twitter.applyWidgets();
+    $.socialthings.facebook.loadJS();
+    $.socialthings.gplus.options.lang = 'ja';
+    $.socialthings.gplus.applyWidgets();
+    $.socialthings.hatebu.applyWidgets();
+});
+
+</script>
+</article>
+            </div>
+          <footer class="global-footer">
+            <div class="global-footer__content">
+              <h3 class="global-footer__title">Author</h3>
+              <i class="icon__author"></i>
+              <div class="global-footer__author">
+                <p>中島直博（なかじまなおひろ）/ nakajmg（じまぐ）
+                <p>フロントエントエンジニア。スマホ向けブラウザゲーム作ってます。
+                <p>埼玉出身の豊島ボーイ。
+              </div>
+            </div>
+            <div class="global-footer__contact">
+              <ul class="global-footer__contact-list">
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/nakajmg">nakajmg@Twitter</a>
+                <li><i class="icon-github-alt"></i><a href="https://github.com/nakajmg">nakajmg@Github</a>
+                <li><i class="icon-html5"></i><a href="http://qiita.com/nakajmg">nakajmg@Qiita</a>
+              </ul>
+            </div>
+          </footer>
+        </main>
+
+    </body>
+</html>
