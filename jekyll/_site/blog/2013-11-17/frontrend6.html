@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>GitとJenkinsとSTF(仮) @Frontrend Vol.6</title>
+        <meta name="viewport" content="width=device-width">
+<!-- OGPtoka -->
+
+        <meta property="og:description" content="Frontrend Vol.6に参加してきた。感想と軽くメモした内容をつらつらと書いておく。F..." />
+        <meta property="og:title" content="GitとJenkinsとSTF(仮) @Frontrend Vol.6" />
+        <meta property="og:type" content="website" />
+        
+          <meta property="og:url" content="http://nakajmg.github.io/blog/2013-11-17/frontrend6.html" />
+        
+        <meta property="og:site_name" content="じまぐてっく" />
+        <meta property="og:image" content="http://nakajmg.github.io/img/tech.png" />
+        
+          <meta property="article:published_time" content="2013-11-17" />
+        
+
+<!-- OGPtoka -->
+
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/common.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+    </head>
+    <body>
+        <main class="global-wrapper">
+          <header class="global-header">
+            <a href="/">
+              <!-- <h1 class="global-header__title">JMGTECH</h1> -->
+              <h1 class="global-header__title">JMG<span class="logo--tech"></span>TECH</h1>
+            </a>
+          </header>
+          <nav class="global-nav">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+          </nav>
+            <div  class="content-wrapper">
+              <article class="content">
+    <header class="content-header">
+        <h2 class="content-title">GitとJenkinsとSTF(仮) @Frontrend Vol.6</h2>
+        <p class="content-date">2013-11-17</p>
+    </header>
+
+    <p><img src="/img/photo/2013-11-17.jpg" alt="/img/photo/2013-11-17.jpg"></p>
+
+<p><a href="http://frontrend.github.io/events/06/">Frontrend Vol.6</a>に参加してきた。<br>
+感想と軽くメモした内容をつらつらと書いておく。</p>
+
+<p><a href="http://togetter.com/li/590889">Frontrend/06 @togetter</a></p>
+
+<hr>
+
+<p>今回はGit・Jenkins・Androidのテストツールといった内容。</p>
+
+<p>フロントエンドからちょっと外れてる様に見えるかもしれないけど、GitとJenkins(CIツール)はフロントエンドを続けて上でも必要なツールだと思った。</p>
+
+<h2>いつやるの？Git入門<a href="https://twitter.com/matsukaz">@matsukaz</a></h2>
+
+<p>今まで聞いたGitの解説で一番わかりやすかったかも。<br>
+<code>pull</code> <code>fetch</code> <code>reset</code> <code>rebase</code> とかのコマンドはきちんと理解できてなかったのもあって勉強になった。  </p>
+
+<p>特に<code>rebase</code>と<code>merge</code>はわりと混乱してたのがスッキリした。<br>
+ブランチの操作も詳しく丁寧に説明してくれててすごく良かった。
+セッションで紹介されてたブランチの操作を学べるサービスも遊び感覚でやってみようと思う。</p>
+
+<p><a href="http://k.swd.cc/learnGitBranching-ja/">Learn Git Branching</a></p>
+
+<p>以下メモ</p>
+
+<hr>
+
+<h3>Gitのメリット</h3>
+
+<ul>
+<li>commitの対象管理が簡単</li>
+<li>commitした内容を修正できる</li>
+<li>pushとfetch以外の操作がローカルで完結してる
+
+<ul>
+<li>最新の状態をローカルに反映しておけばオフラインでも作業できる</li>
+</ul></li>
+<li>効率よくデータを保持
+
+<ul>
+<li>圧縮したり色々</li>
+</ul></li>
+</ul>
+
+<p>やはりSubversionと比べるとGitのほうが色々捗るなーと感じる。</p>
+
+<h3>Gitの3つのデータ領域</h3>
+
+<ul>
+<li>作業ディレクトリ(ワークツリー)</li>
+<li>ステージング・エリア(インデックス)</li>
+<li>Gitディレクトリ</li>
+</ul>
+
+<p>作業ディレクトリ &lt;-&gt; ステージング &lt;-&gt; Gitディレクトリ の3つの振る舞いを把握すればGitは怖くない。<br>
+ファイルを追加・変更したりコミットしたりチェックアウトしたりと、何をしたらどこにどうデータが反映されていくかを理解すれば各コマンドの動きも理解できそう。</p>
+
+<h3>mergeとrebase</h3>
+
+<ul>
+<li>適材適所でつかう</li>
+</ul>
+
+<p>別のブランチから変更を反映するっていうくくりでは一緒だけど、ワークツリーがどう動くかはちゃんと理解しておくといいのかなと。<br>
+発表資料を見ればつかめると思う。</p>
+
+<h3>リンク</h3>
+
+<ul>
+<li><a href="http://git-scm.com/book/ja">Pro Git</a></li>
+<li><a href="https://github.com/blog/1557-github-flow-in-the-browser">GitHub Flow in the Brower</a></li>
+<li><a href="http://k.swd.cc/learnGitBranching-ja/">Learn Git Branching</a></li>
+<li><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></li>
+<li><a href="http://matome.naver.jp/odai/2136491451473222801">Git初心者が見るべきサイトまとめ</a></li>
+</ul>
+
+<p>http://www.slideshare.net/matsukaz/git-28304397</p>
+
+<h2>フロントエンジニアとCIとテスト<a href="https://twitter.com/st44100">@st44100</a></h2>
+
+<p>Jenkinsなお話がメイン。フロントエンドでCIツールを使う利点、CIツールを使った上で他のエンジニアとどう絡むかとか「Jenkins使ってみようかな」と思わせる内容だった。<br>
+特にJenkinsのビルドの成果物を利用することで&quot;成果物から属人性を排除する&quot;っていう考えは大事だと思った。</p>
+
+<p>Jenkinsになにをやらせるかっていう点で紹介されてた各種ツールも、Jenkinsを使わないとしても覚えて(使って)おいて損は全くなさそう。
+Gruntを使ってる人ならそのタスクをJenkinsにやらせるだけなので、無理なく導入できるなと感じたし自動化を一歩先に進められるんじゃないかなと思う。</p>
+
+<p>以下メモ</p>
+
+<hr>
+
+<h3>インストール</h3>
+
+<ul>
+<li><code>brew install jenkins</code></li>
+</ul>
+
+<p>簡単。</p>
+
+<h3>成果物の管理</h3>
+
+<ul>
+<li>個人の環境の違いでビルドの成功・失敗が変わることがある</li>
+<li>Jenkinsのビルド結果を成果物にすればその点をクリアできる
+
+<ul>
+<li>属人性の排除</li>
+</ul></li>
+</ul>
+
+<p>ある特定の人の環境でしかビルドできないとかあったとき、その人がいなくなったら誰もビルドできないといった事態にならないように。</p>
+
+<h3>テスト</h3>
+
+<ul>
+<li>単体テスト
+
+<ul>
+<li>Jasmine</li>
+<li>PhantomJS</li>
+</ul></li>
+<li>複合テスト
+
+<ul>
+<li>CasperJS</li>
+</ul></li>
+</ul>
+
+<h3>ページのSSをとる</h3>
+
+<ul>
+<li>CasperJSで自動で全ページのSSをとる
+
+<ul>
+<li>修正確認の時とかにブラウザで確認する時間をある程度短縮できる</li>
+</ul></li>
+<li>wraithでSSのdiffを取る
+
+<ul>
+<li>修正前と修正後のSSのdiffを取って表示してくれる
+
+<ul>
+<li>遅いのが難点</li>
+<li>一定間隔で裏で自動実行させておくとかするといいかも</li>
+<li>PhantomCSSでモジュール単位で比較すれば早くなるかも</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>GruntでCasperJSのタスクを設定しておけばJenkinsの成果物としてSSが撮れる。Jenkinsを使わないとしてもCasperJSは導入しておきたい。</p>
+
+<h3>リンク</h3>
+
+<ul>
+<li><a href="http://jenkins-ci.org/">Jenkins</a>
+
+<ul>
+<li><a href="http://www.cloudbees.com/#slide-2">CloudBees</a></li>
+<li><a href="http://ccmenu.sourceforge.net/">CCMenu</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Plugins">Jenkins Plugins</a></li>
+</ul></li>
+<li><a href="http://pivotal.github.io/jasmine/">Jasmine</a></li>
+<li><a href="http://phantomjs.org/">PhantomJS</a></li>
+<li><a href="http://casperjs.org/">CasperJS</a>
+
+<ul>
+<li><a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a></li>
+</ul></li>
+<li><a href="https://github.com/BBC-News/wraith">wraith</a></li>
+</ul>
+
+<h2>Android端末の動作検証の課題を解決: STF<a href="https://twitter.com/gunta85">@gunta85</a> &amp; <a href="https://twitter.com/sorccu">@sorccu</a></h2>
+
+<p>先日行われた<a href="http://frontrend.github.io/events/chrome/">Frontrend x Chrome Tech Talk Night Extended</a>のLTで紹介されてたAndroid検証用ツール「STF(仮)」の紹介。</p>
+
+<p>このツールとにかくすごい。いまフロントエンドエンジニアがAndroid向けの開発に対して抱えてる不満や悩みを全部解決しちゃうんじゃないかとまで思う。</p>
+
+<p>OSSで少しずつ機能を公開する予定らしいのでフロントエンドの開発効率が飛躍的に向上する日も近い。ありがたや</p>
+
+<p>以下メモ</p>
+
+<hr>
+
+<h3>Androidについて</h3>
+
+<ul>
+<li>国内250種類</li>
+<li>世界12000種類…</li>
+</ul>
+
+<p>これにOSのバージョン違いを考えると…いや、もう考えたくないやめた。</p>
+
+<h4>バグバグバグ</h4>
+
+<ul>
+<li>各メーカーが独自機能と独自バグを盛り込む
+
+<ul>
+<li>エミュレータ遅い</li>
+<li>エミュレータで再現不可能</li>
+<li>GENYMOTION
+
+<ul>
+<li>実機と違うし</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h4>どうする？</h4>
+
+<ul>
+<li>物理的に操作</li>
+<li>ChromeのUSBデバッグ？
+
+<ul>
+<li>2.3がシェア30%~40%ある</li>
+<li>Chrome入らないしそもそも標準ブラウザと違う
+
+<ul>
+<li>だめだ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h4>つらい</h4>
+
+<ul>
+<li>充電
+
+<ul>
+<li>気づいたら切れてるし時間かかるしつらい</li>
+</ul></li>
+<li>操作方法
+
+<ul>
+<li>違いすぎてつらい</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h3>STF(仮)の出番だ</h3>
+
+<ul>
+<li><p><strong>ブラウザから全端末を検証する</strong></p></li>
+<li><p>URLを開く</p>
+
+<ul>
+<li>標準ブラウザ・Chrome・WebViewどれでも指定できる</li>
+</ul></li>
+<li><p>リモート操作</p>
+
+<ul>
+<li>レスポンスはやい。3Gでも全然いけてる</li>
+</ul></li>
+<li><p>SS撮れる</p>
+
+<ul>
+<li>ページ全体も撮れる</li>
+<li>SSにURLが発行される
+
+<ul>
+<li>他の人にURLコピペで送れる</li>
+</ul></li>
+</ul></li>
+<li><p>CPU・GPUの負荷状況が見れる</p>
+
+<ul>
+<li>マルチコアでコア数減らして動作してるとかリアルタイムでわかる</li>
+</ul></li>
+<li><p>転送速度のグラフ表示</p>
+
+<ul>
+<li>USBの転送速度。2M~5Mくらい</li>
+</ul></li>
+<li><p>任意のJavaScriptの実行速度計測</p>
+
+<ul>
+<li>速い順にソートしたりできる</li>
+</ul></li>
+<li><p>ローカルページをリモート端末で表示</p>
+
+<ul>
+<li>リバースポートフォワーディングしてlocalhostとかのページをリモートの端末で表示できる</li>
+<li>3G回線でもOK。同一ネットワークとか気にしなくてもいい</li>
+</ul></li>
+<li><p>weinreを使ったInspect</p>
+
+<ul>
+<li>リモート端末に対してDevToolsみたいにリアルタイムでDOMとかCSSをいじれる</li>
+</ul></li>
+<li><p>ハードウェアボタンの制御</p>
+
+<ul>
+<li>音量の増減とかできる</li>
+</ul></li>
+<li><p>端末リソースの確保と解放</p>
+
+<ul>
+<li>検証したい端末にチェックするだけ</li>
+</ul></li>
+</ul>
+
+<p>書ききれない。</p>
+
+<p>デバッグする端末はSTFサーバ？につないでおくことでどっからでも操作できる。それこそ海外でも大丈夫らしい。  </p>
+
+<p>会社が保有してる端末を使って開発する場合、誰かが端末を占有したままで、使いたい端末を使えるまでに時間がかかるなんてことはザラにある。<br>
+端末が手元に来ても充電が切れててすぐ使えなかったり、充電ケーブルどこいったみたいなこともよくある。</p>
+
+<p>複数のAndroidで画面表示を確認したいだけなのに物理的・ソフトウェア的な色んな要素が邪魔してほんとにめんどくさい。時間の無駄。</p>
+
+<p>STF(仮)は色んな問題を解決してくれると思う。機能的にもすばらしいし、目指してるヴィジョンみたいなものもすごく共感できる。グンタイケメン。  </p>
+
+<p>今まで無駄に費やしてた時間を短縮できるようになればリリースのサイクルを早めたり、もっと注力したいところに時間を使えるようになる。</p>
+
+<p>すっごく期待してる。</p>
+
+<h2>次回開催を期待して</h2>
+
+<p>内容すごく良かった。</p>
+
+<p>GitもCIツールもちゃんと使えるようになっておかないと置いてかれる気がする。</p>
+
+<p>Androidに関しては思うところがいっぱいあるけどSTF(仮)応援してる。</p>
+
+<p>次回開催も(ピザとビール)期待してます。</p>
+
+
+    <div class="social-btns">
+    <a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://nakajmg.github.io/blog/2013-11-17/frontrend6.html" data-text="GitとJenkinsとSTF(仮) @Frontrend Vol.6 | じまぐてっく">Tweet</a>
+    <div class="fb-like" data-href="http://nakajmg.github.io/blog/2013-11-17/frontrend6.html" data-send="false" data-layout="button_count" data-width="118" data-show-faces="true"></div>
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加" ><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    <div class="g-plusone" data-size="medium"></div>
+    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/jquery.socialthings.min.js"></script>
+<script>
+
+$(function(){
+    $.socialthings.twitter.applyWidgets();
+    $.socialthings.facebook.loadJS();
+    $.socialthings.gplus.options.lang = 'ja';
+    $.socialthings.gplus.applyWidgets();
+    $.socialthings.hatebu.applyWidgets();
+});
+
+</script>
+</article>
+            </div>
+          <footer class="global-footer">
+            <div class="global-footer__content">
+              <h3 class="global-footer__title">Author</h3>
+              <i class="icon__author"></i>
+              <div class="global-footer__author">
+                <p>中島直博（なかじまなおひろ）/ nakajmg（じまぐ）
+                <p>フロントエントエンジニア。スマホ向けブラウザゲーム作ってます。
+                <p>埼玉出身の豊島ボーイ。
+              </div>
+            </div>
+            <div class="global-footer__contact">
+              <ul class="global-footer__contact-list">
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/nakajmg">nakajmg@Twitter</a>
+                <li><i class="icon-github-alt"></i><a href="https://github.com/nakajmg">nakajmg@Github</a>
+                <li><i class="icon-html5"></i><a href="http://qiita.com/nakajmg">nakajmg@Qiita</a>
+              </ul>
+            </div>
+          </footer>
+        </main>
+
+    </body>
+</html>
