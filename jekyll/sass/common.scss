@@ -49,6 +49,11 @@ code{
     border: 1px solid #CCC;
     padding: 0 3px 0 3px;
 }
+hr{
+    border-color: rgba(0,0,0,.1);
+    border-bottom: none;
+    @include box-shadow(0 1px 0 rgba(255,255,255,1));
+}
 
 .global-wrapper{
     background-color: #F5F5F5;
