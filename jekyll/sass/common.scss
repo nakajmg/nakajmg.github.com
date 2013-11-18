@@ -263,9 +263,9 @@ hr{
         font-size: 1.8rem;
         line-height: 1.6;
 
-    @media screen and (max-width:$breakpoint__smartphone){
-        font-size: 1.4rem;
-    }
+        @media screen and (max-width:$breakpoint__smartphone){
+            font-size: 1.4rem;
+        }
 
 
         h3{
@@ -279,7 +279,15 @@ hr{
         p{
             margin: 1em 0;
         }
+        iframe{
+            @media screen and (max-width:$breakpoint__smartphone){
+                max-width: 300px;
+                max-height: 260px;
+            }
+        }
     }
+
+
     h2{
         border-bottom: 1px solid rgba(94, 94, 94, 0.1);
         @include box-shadow(0 1px 0 rgba(255,255,255,.8));
