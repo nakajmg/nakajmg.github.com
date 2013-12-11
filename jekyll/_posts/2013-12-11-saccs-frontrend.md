@@ -9,14 +9,12 @@ categories: 雑記 勉強会
 
 [SaCSS Special4 Frontrend in Sapporo](http://sacss.net/special04/)に参加してきた。
 
-[当日のtogetter](http://togetter.com/li/601244)
-
 
 勉強会参加のために初の北海道上陸。
 
 [SaCSS](http://sacss.net/)は札幌のフロントエンド向けのコミュニティ。今回はそこでFrontrendの方たちの講演があるということで飛んでいきました。
 
-みじかーく感想などを。当日のtogetterc(http://togetter.com/li/601244)はこちら。
+みじかーく感想などを。[当日のtogetterはこちら。](http://togetter.com/li/601244)
 
 ## 現場で使える！CSS3デザインレシピ [@herablog](https://twitter.com/herablog)
 
