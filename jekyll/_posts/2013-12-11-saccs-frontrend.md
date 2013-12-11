@@ -30,13 +30,18 @@ CSS3のテクニックは色々知ってるつもりだったけど、まだま�
 紹介された各種ツール
 
 * [HTMLInspector](https://github.com/philipwalton/html-inspector)
-    * [H:inspector](https://chrome.google.com/webstore/detail/hinspector/poeiekompeckjdiigdamalgoahpldgbp)
+* [H:inspector](https://chrome.google.com/webstore/detail/hinspector/poeiekompeckjdiigdamalgoahpldgbp)
 * [CSSLint](https://github.com/stubbornella/csslint)
 * [JSHint](http://jshint.com/)
 * [Grunt](http://gruntjs.com)
 
+* [講演で使われたデモとそのサンプル](https://github.com/1000ch/brushup-sample)
+
 各種Lintツールを使うことで仕様にそったコードであったり、コードにある程度の一貫性を持たせられたりというメリットがある。「自分以外の人でも読めるようにコードを書く」のが大事だなと最近よく考える。
 
+---
+
+* [SaCSS SP4 Frontrend in Sapporoでリファクタリングについて喋ってきました - 1000ch.net](http://1000ch.net/2013/12/10/SaCSSFollowUp/)
 
 ## Hello jQuery [@pocotan001](https://twitter.com/pocotan001)
 
