@@ -9,13 +9,13 @@ categories: AdventCalendar
 
 この記事は [BEM Advent Calendar 2013](http://www.adventar.org/calendars/61) 17日目のエントリです。
 
-**※このエントリはCSSのBEMのことは書きません。**
+このエントリはCSSのBEMのことはあまり書きません。
 
 ちゃんとしたBEMのエントリを読みたい人は[BEM Advent Calendar 2013](http://www.adventar.org/calendars/61)の他のエントリを見てください。
 
 
 
-## おれのBEM
+## おれとBEM
 
 BEM歴は3ヶ月くらいです。ゆるBEMMERです。
 
@@ -43,7 +43,7 @@ BlockやElementの取り方はかなり悩みますが、自分の思考を後�
 
 ここからが本題です。
 
-自分はBEMのBlock・Element・Modifierという分け方を超拡大解釈してSassの変数名付けに使ってます。
+自分はBEMのBlock・Element・Modifierという分け方を超拡大解釈してSassの変数名付けをBEMっぽくしてます。
 
 例えば
 
@@ -82,7 +82,7 @@ $img__global--bg-noise: '/img/bg-noise.png';
 
 ## おわりに
 
-こんなしょーもないエントリ書いていいもんかと迷ったけど、他の人のエントリ読んでたらBEM疲れしたのでヤケになって書きました。
+こんなしょーもないエントリ書いていいもんか迷ったけど、他の人のエントリ読んでたらBEM疲れしたので書いた٩(๑❛ᴗ❛๑)۶
 
 ---
 
