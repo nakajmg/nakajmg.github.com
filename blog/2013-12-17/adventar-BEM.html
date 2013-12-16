@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>変数でBEMる</title>
+        <meta name="viewport" content="width=device-width">
+<!-- OGPtoka -->
+
+        <meta property="og:description" content="この記事は BEM Advent Calendar 2013 17日目のエントリです。このエン..." />
+        <meta property="og:title" content="変数でBEMる" />
+        <meta property="og:type" content="website" />
+        
+          <meta property="og:url" content="http://nakajmg.github.io/blog/2013-12-17/adventar-BEM.html" />
+        
+        <meta property="og:site_name" content="じまぐてっく" />
+        <meta property="og:image" content="http://nakajmg.github.io/img/tech.png" />
+        
+          <meta property="article:published_time" content="2013-12-17" />
+        
+
+<!-- OGPtoka -->
+
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/common.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.css">
+    </head>
+    <body>
+        <main class="global-wrapper">
+          <header class="global-header">
+            <a href="/">
+              <!-- <h1 class="global-header__title">JMGTECH</h1> -->
+              <h1 class="global-header__title">JMG<span class="logo--tech"></span>TECH</h1>
+            </a>
+          </header>
+          <nav class="global-nav">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+          </nav>
+            <div  class="content-wrapper">
+              <article class="content">
+    <header class="content-header">
+        <h2 class="content-title">変数でBEMる</h2>
+        <p class="content-date">2013-12-17</p>
+    </header>
+
+    <p><img src="/img/photo/2013-12-17.jpg" alt="/img/photo/2013-12-17.jpg"></p>
+
+<p>この記事は <a href="http://www.adventar.org/calendars/61">BEM Advent Calendar 2013</a> 17日目のエントリです。</p>
+
+<p>このエントリはCSSのBEMのことはあまり書きません。</p>
+
+<p>ちゃんとしたBEMのエントリを読みたい人は<a href="http://www.adventar.org/calendars/61">BEM Advent Calendar 2013</a>の他のエントリを見てください。</p>
+
+<h2>おれとBEM</h2>
+
+<p>BEM歴は3ヶ月くらいです。ゆるBEMMERです。</p>
+
+<p>BEMり方は色々な人が色々と書いてます。</p>
+
+<ul>
+<li><a href="https://github.com/juno/bem-methodology-ja">juno / bem-methodology-ja</a></li>
+<li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head ’round BEM syntax</a></li>
+<li><a href="http://blog.ruedap.com/2013/10/29/block-element-modifier">BEMという命名規則とSass 3.3の新しい記法</a></li>
+<li><a href="http://dskd.jp/archives/34.html">CSSの命名規則にBEMを取り入れてみる</a></li>
+<li><a href="https://app.codegrid.net/entry/bem-basic-1">BEMによるフロントエンドの設計</a></li>
+</ul>
+
+<p>今までBEMって書いたのは主に自分だけがさわるCSSだったので、これらの概念やルールをあまり厳格に守る気でBEMってはいません。</p>
+
+<p>自分がBEMる際に重視しているのは<strong>「同一の見た目のモジュールを別のタイミングで見たときに全く同じ形でBEMれるかどうか」</strong>です。</p>
+
+<p>同じ形でBEMれないならば、それは自分自身の中で一定のルールが出来上がっていないということです。この状況ではいくらBEMっても全体としてふらふらと定まらないクラス付けが行われ、統一感のないCSSができあがるのではと思います。</p>
+
+<p>BlockやElementの取り方はかなり悩みますが、自分の思考を後から辿れる形になっていれば良いと割りきってBEMるようにしています。(一人用BEM)</p>
+
+<p>複数人での開発においては命名規則などに厳格なルールがあるならば、それがBEMである必要はないと思います。</p>
+
+<h2>変数でBEMる</h2>
+
+<p>ここからが本題です。</p>
+
+<p>自分はBEMのBlock・Element・Modifierという分け方を超拡大解釈してSassの変数名付けをBEMっぽくしてます。</p>
+
+<p>例えば</p>
+
+<div class="highlight"><pre><code class="sass"><span class="na">$size__font--small</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="err">;</span>
+<span class="na">$size__font--normal</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="err">;</span>
+<span class="na">$size__font--large</span><span class="o">:</span> <span class="mi">18</span><span class="kt">px</span><span class="err">;</span>
+</code></pre></div>
+
+<p>や</p>
+
+<div class="highlight"><pre><code class="sass"><span class="na">$color__font--body</span><span class="o">:</span> <span class="mh">#333</span><span class="err">;</span>
+<span class="na">$color__font--header</span><span class="o">:</span> <span class="mh">#59bb0c</span><span class="err">;</span>
+<span class="na">$color__font--link</span><span class="o">:</span> <span class="mh">#0096D6</span><span class="err">;</span>
+<span class="na">$color__shadow--white</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,.</span><span class="mi">3</span><span class="p">)</span><span class="err">;</span>
+<span class="na">$color__shadow--black</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,.</span><span class="mi">3</span><span class="p">)</span><span class="err">;</span>
+</code></pre></div>
+
+<p>とか</p>
+
+<div class="highlight"><pre><code class="sass"><span class="na">$img__sprite--main</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">/img/sprite_main.png&#39;</span><span class="err">;</span>
+<span class="na">$img__global--author</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">/img/author.png&#39;</span><span class="err">;</span> 
+<span class="na">$img__global--bg-noise</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">/img/bg-noise.png&#39;</span><span class="err">;</span> 
+</code></pre></div>
+
+<p>とか。</p>
+
+<p>大分類__中分類--小分類にするだけ。</p>
+
+<p>こんな感じで命名してくと変数名がかぶることもほぼないし、「変数名なんだったっけ」なときにエディタの補完なしでも思い出せます。あとから見た時にもどの変数をどこに使ってるのか(影響範囲)が推測しやすくなります。</p>
+
+<p>もはやBEMでもなんでもないけど、変数名をつけた時の思考を辿るための道標としてBEMっぽいメソッドを利用してるというお話でした。</p>
+
+<h2>おわりに</h2>
+
+<p>こんなしょーもないエントリ書いていいもんか迷ったけど、他の人のエントリ読んでたらなんかだBEM疲れしてきたので書きました٩(๑❛ᴗ❛๑)۶</p>
+
+<hr>
+
+<p><a href="http://www.adventar.org/calendars/61">BEM Advent Calendar 2013</a>、明日は<a href="http://yomotsu.net/blog/2013/12/12/bem-with-namespace.html">yomotsuさん</a>です。</p>
+
+
+    <div class="social-btns">
+    <a href="https://twitter.com/share" class="twitter-share-button"  data-url="http://nakajmg.github.io/blog/2013-12-17/adventar-BEM.html" data-text="変数でBEMる | じまぐてっく">Tweet</a>
+    <div class="fb-like" data-href="http://nakajmg.github.io/blog/2013-12-17/adventar-BEM.html" data-send="false" data-layout="button_count" data-width="118" data-show-faces="true"></div>
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加" ><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+    <div class="g-plusone" data-size="medium"></div>
+    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+  <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/jquery.socialthings.min.js"></script>
+<script>
+
+$(function(){
+    $.socialthings.twitter.applyWidgets();
+    $.socialthings.facebook.loadJS();
+    $.socialthings.gplus.options.lang = 'ja';
+    $.socialthings.gplus.applyWidgets();
+    $.socialthings.hatebu.applyWidgets();
+});
+
+</script>
+</article>
+            </div>
+          <footer class="global-footer">
+            <div class="global-footer__content">
+              <h3 class="global-footer__title">Author</h3>
+              <i class="icon__author"></i>
+              <div class="global-footer__author">
+                <p>中島直博（なかじまなおひろ）/ nakajmg（じまぐ）
+                <p>フロントエンドエンジニア。無職。
+                <p>埼玉出身の豊島ボーイ。
+              </div>
+            </div>
+            <div class="global-footer__contact">
+              <ul class="global-footer__contact-list">
+                <li><i class="icon-twitter"></i><a href="https://twitter.com/nakajmg">nakajmg@Twitter</a>
+                <li><i class="icon-github-alt"></i><a href="https://github.com/nakajmg">nakajmg@Github</a>
+                <li><i class="icon-html5"></i><a href="http://qiita.com/nakajmg">nakajmg@Qiita</a>
+              </ul>
+            </div>
+          </footer>
+        </main>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-46195295-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>
