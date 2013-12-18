@@ -40,12 +40,12 @@ CSS Test Suitesについてはこちらに詳しく書かれています。
 
 ## Test the Web Forwardというムーブメント
 
-そんなテストケースをみんなで書いてWebを前進させようという取り組みが「Test the Web Forward」です。
-どんな内容は「テストを書くハッカソン」だと言えばイメージが掴みやすいかもしれません。
+そんなテストケースをみんなで書いてWebを前進させようという取り組みが「[Test the Web Forward](http://testthewebforward.org/)」です。
+どんな内容かは「テストを書くハッカソン」だと言えばイメージが掴みやすいかもしれません。
 
-世界的なムーブメントで各国で開催されています。最近では中国の深圳で開催されました。
+世界的なムーブメントで各国で開催されています。最近では[中国の深圳](http://testthewebforward.org/events/2013/shenzhen.html)で開催されました。
 
-今年の6月には東京でも開催され、600以上のテストケースが作成されました。
+今年の6月には[東京でも開催され](http://testthewebforward.org/events/2013/tokyo.html)、600以上のテストケースが作成されました。
 
 * [Web標準をテストするハッカソン –「Test The Web Forward」がついに東京に上陸](http://plus.adobe-adc.jp/post-3208/)
 * [テストを通じて「より良いWebの実現」に貢献～Test the Web Forwardレポート](http://www.atmarkit.co.jp/ait/articles/1306/25/news008.html)
