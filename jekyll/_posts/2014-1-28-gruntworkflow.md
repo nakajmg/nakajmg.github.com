@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gruntfileダイエット"
+title:  "Gruntダイエットで健やかな開発を"
 date:   2014-1-28 6:00
 categories: 雑記 Grunt
 ---
