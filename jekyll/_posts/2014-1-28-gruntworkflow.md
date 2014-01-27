@@ -9,7 +9,7 @@ categories: 雑記 Grunt
 
 Gruntタスクでダイエットする話ではないです。
 
-[Gruntfile.jsを10行にした話 on Qiita](http://qiita.com/watilde/items/278ce0593339072d5627)
+[Gruntfile.jsを10行にした話@watilde on Qiita](http://qiita.com/watilde/items/278ce0593339072d5627)
 
 このエントリを見てGruntfileのダイエットをしてみた。
 
