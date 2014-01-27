@@ -263,8 +263,14 @@ hr{
         font-size: 1.8rem;
         line-height: 1.6;
 
+        .gist{
+            font-size: 1.3rem;
+        }
         @media screen and (max-width:$breakpoint__smartphone){
             font-size: 1.4rem;
+            .gist{
+                font-size: 1.1rem;
+            }
         }
 
 
