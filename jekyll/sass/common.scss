@@ -265,6 +265,11 @@ hr{
 
         .gist{
             font-size: 1.3rem;
+            .gist-file{
+              .gist-data{
+                  background-color: #fff;
+              }
+            }
         }
         @media screen and (max-width:$breakpoint__smartphone){
             font-size: 1.4rem;
