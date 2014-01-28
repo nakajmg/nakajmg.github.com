@@ -65,3 +65,8 @@ background: #3F3F3F;
 color: #DCDCDC;
 font-size: 1.4rem;
 }
+@media screen and (max-width: 400px) {
+  pre code{
+    font-size: 1.1rem;
+  }
+}
