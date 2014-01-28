@@ -9,15 +9,15 @@ javascripts_dir = "js"
 fonts_dir = "font"
 
 # enviroment = :development
-enviroment = :production
+# enviroment = :production
 
-if enviroment == :development
+if environment == :development
     output_style = :expanded
     line_comments = true
     sass_options = {:sourcemap => true}
     enable_sourcemaps = true
 
-elsif enviroment == :production
+elsif environment == :production
     output_style = :compressed
     line_comments = false
     enable_sourcemaps = false

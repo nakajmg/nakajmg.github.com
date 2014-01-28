@@ -30,11 +30,13 @@ module.exports = function(grunt) {
     compass: {
         dist: {
             options: {
+                config: 'config.rb',
                 environment: 'development'
             }
         },
         prod: {
             options: {
+                config: 'config.rb',
                 environment: 'production'
             }
         }
@@ -70,7 +72,7 @@ module.exports = function(grunt) {
     watch: {
         dist: {
             files: ['sass/*.scss'],
-            tasks: ['compass:dist','csso:publish'],
+            tasks: ['compass:dist'],
             options: {
                 livereload: false
             }
