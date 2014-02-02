@@ -2,7 +2,7 @@ name: じまぐてっく
 title: JMGTECH
 markdown: redcarpet
 pygments: true
-paginate: 10
+# paginate: 20
 permalink: /blog/:year-:month-:day/:title.html
 category: true
 exclude: ['sass']
