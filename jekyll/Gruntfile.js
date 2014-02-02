@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     csso: {
       publish: {
         files: {
-          './css/common.min.css': ['./css/common.css']
+          './css/style.min.css': ['./css/style.css']
         }
       }
     },
