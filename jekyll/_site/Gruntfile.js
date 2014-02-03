@@ -69,6 +69,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    autoprefixer: {
+        options: {
+          browsers: ['ios >= 5', 'android >= 2.3', 'ff 15', 'chrome 25', 'ie 7', 'ie 8', 'ie 9', 'ie 10', 'ie 11']
+          // browsers: ['ff 15', 'chrome 25', 'ie 7', 'ie 8', 'ie 9', 'ie 10', 'ie 11']
+          // browsers: ['ios >= 5', 'android >= 2.3']
+        },
+      dist: {
+        src: "./css/style.css"
+      }
+    },
     watch: {
         dist: {
             files: ['sass/*.scss'],
@@ -105,10 +115,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-growl');
   grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
 
   grunt.registerTask('default',['connect','watch']);
   grunt.registerTask('develop',['csso']);
-  grunt.registerTask('publish',['csso','jekyll','copy:publish','growl:publish']);
+  grunt.registerTask('publish',['autoprefixer','csso','jekyll','copy:publish','growl:publish']);
 
 };
