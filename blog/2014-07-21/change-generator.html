@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014/5 | じまぐてっく</title>
+  <title>JekyllからHexoに移行した | じまぐてっく</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="じまぐてっく">
-<meta property="og:url" content="http://nakajmg.github.io/archives/2014/05/">
+  <meta name="description" content="このブログのジェネレータをJekyllからHexoに変えた。理由は色々。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JekyllからHexoに移行した">
+<meta property="og:url" content="http://nakajmg.github.io/blog/2014-07-21/change-generator.html">
 <meta property="og:site_name" content="じまぐてっく">
-<meta property="og:description">
+<meta property="og:description" content="このブログのジェネレータをJekyllからHexoに変えた。理由は色々。">
+<meta property="og:image" content="/img/photo/2014-7-21.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="じまぐてっく">
-<meta name="twitter:description">
+<meta name="twitter:title" content="JekyllからHexoに移行した">
+<meta name="twitter:description" content="このブログのジェネレータをJekyllからHexoに変えた。理由は色々。">
 <meta name="twitter:creator" content="@nakajmg">
   
   
@@ -68,12 +69,10 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hpbn" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-change-generator" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2014-05-13/hpbn.html" class="article-date">
-  <time datetime="2014-05-12T20:00:00.000Z" itemprop="datePublished">2014 05/13</time>
+    <a href="/blog/2014-07-21/change-generator.html" class="article-date">
+  <time datetime="2014-07-20T20:00:00.000Z" itemprop="datePublished">2014 07/21</time>
 </a>
     
   <div class="article-category">
@@ -87,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name" class="article-title">
-      <a href="/blog/2014-05-13/hpbn.html">フロントエンドエンジニアから見た『ハイパフォーマンス ブラウザネットワーキング』</a>
+    <h1 class="article-title" itemprop="name">
+      JekyllからHexoに移行した
     </h1>
   
 
@@ -97,35 +96,70 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/img/photo/2014-5-13.png" alt="header_image"></p>
-<p>オライリーさんから発売される「<a href="http://www.oreilly.co.jp/books/9784873116761/" target="_blank" rel="external">ハイパフォーマンス ブラウザネットワーキング</a>」を頂きました。ありがとうございます。</p>
-<blockquote>
-<p>Ilya Grigorik　著、和田 祐一郎／株式会社プログラミングシステム社　訳<br> 現代のアプリケーションエンジニアは、UIやデータ処理、開発言語、プラットフォームの仕様や癖だけでなく、サーバやネットワークについても、上から下まで、表から裏まで広く知ることを求められます。本書は「ブラウザ」に関連し、インターネットで使用されるさまざまなネットワーク技術をまとめたものです。HTTP/2.0やWebRTCなどの最新技術、WebSocketやXMLHttpRequestなどのブラウザAPI、そしてそれらの土台となるTCPやUDPやトランスポート層についてまでを幅広くカバーします。本書はカバーする技術範囲の広さを「パフォーマンス」という軸に沿って説明します。また改善前後の性能・速さを可能な限り具体化し、それぞれの場面においてのパフォーマンス改善幅を示します。ネットワークのデータリンク層からアプリケーション層、そして過去から近い将来までをまとめた本書は、インターネットにかかわるすべてのエンジニア必携の一冊です。<br>本書のTwitterハッシュタグは #HPBNjです。</p>
-</blockquote>
-<p>概要に書かれている通り、広範囲のネットワークに関してのナレッジがこの本ではまとめられています。本書の目次を見て、フロントエンドに一番関係していそうだと思った「Webパフォーマンス入門」の章を最初に読んだので、その内容を紹介したいと思います。</p>
+        <p><img src="/img/photo/2014-7-21.png" alt="Hexo"></p>
+<p>このブログのジェネレータを<a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>から<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>に変えた。<br>理由は色々。</p>
+<a id="more"></a>
 
-        
-          <p class="article-more-link">
-            <a href="/blog/2014-05-13/hpbn.html">Read More</a>
-          </p>
-        
+<h2 id="Jekyllをやめた理由">Jekyllをやめた理由</h2>
+<p>Jekyllを使い始めたのが10ヶ月前、その10ヶ月の間に自分のワークフローが変わりすぎてブログを書くのが面倒になってた。</p>
+<p>以前は</p>
+<ul>
+<li>HTML書くの大好き！</li>
+<li>Sassじゃなきゃヤダ！</li>
+<li>Rubyのツールも悪くないね！</li>
+<li>coffeeキライ！</li>
+<li>Gruntぉぉぉぉ</li>
+</ul>
+<p>と思ってたのが今は</p>
+<ul>
+<li>HTMLだるい。Jadeとかで良いのでは</li>
+<li>SassでもStylusでもどっちでも</li>
+<li>Rubyつらい。Nodeがいい</li>
+<li>coffeeスキ！</li>
+<li>gulpぅぅぅぅ</li>
+</ul>
+<p>に変わった。ちょくちょく来る「ブログ作り直したい欲」が来たときにJekyllをカスタマイズする気が一切おきなかったのもある。</p>
+<h2 id="Hexoのいいとこ">Hexoのいいとこ</h2>
+<ul>
+<li>Nodeでできてる</li>
+<li>テンプレートはEJS</li>
+<li>Stylus</li>
+<li>テーマが豊富</li>
+<li>シンタックスハイライト用意してある</li>
+</ul>
+<p>この中でもテーマが豊富なのが大変良い。Jekyllのときはpaginateつけるのにもプラグイン調べて使い方調べてカスタマイズして…て感じで超めんどくさかった。Hexoだと標準でついてるしカスタマイズもymlにパパッと書くだけ。カテゴリとかタグの設定も超簡単。</p>
+<p>デフォルトのテーマの出来が大変良いのでちょこっとカスタマイズしただけで満足。Jekyllからの移行もmdをほんのちょっと修正するだけで簡単にいけた。</p>
+<p>ドキュメントと導入事例が多いのもポイント高い。最初に使おうと考えてた<a href="http://roots.cx/" target="_blank" rel="external">Roots</a>はドキュメントが貧弱すぎるのと事例が全然ないのがつらくて諦めた。ググらビリティが低すぎて調べようにも調べられないのもキツイ。</p>
+<p>Hexoは<a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">プラグイン</a>と<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">テーマ</a>が豊富。<a href="http://hexo.io/api/classes/Hexo.html" target="_blank" rel="external">ドキュメント</a>も必要十分な感じ。</p>
+<h2 id="書く気になる環境">書く気になる環境</h2>
+<p>書きたいと思ったときに書く気になれる環境大事。前は何か書くたびに内容と関係ない部分をいじる必要があって無駄が多かった。<br>これからはgulpのタスクでプレビューとpublishのタスク設定したのでパパッと書けるはず。</p>
+<h2 id="色々書く">色々書く</h2>
+<p>ポエム書いてて思ったことだけどブログ、技術以外のことも書くべきな気がしてきた。思ってることとか、肉のこととか、なんでもいいから書いて残していこうと思う。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nakajmg.github.io/blog/2014-05-13/hpbn.html" data-id="jzydfmznkgca4qay" data-title="フロントエンドエンジニアから見た『ハイパフォーマンス ブラウザネットワーキング』" class="article-share-link">Share</a>
+      <a data-url="http://nakajmg.github.io/blog/2014-07-21/change-generator.html" data-id="tvg0lu29pie39jpy" data-title="JekyllからHexoに移行した" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/書評/">書評</a></li></ul>
-
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2014-05-13/hpbn.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">フロントエンドエンジニアから見た『ハイパフォーマンス ブラウザネットワーキング』</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
