@@ -4,22 +4,41 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-// var shell = require('gulp-shell'),
 
 
-gulp.task('clean', del.bind(null, ['public, ../dist']));
+gulp.task('clean', del.bind(null, ['public']));
 
-gulp.task('default', ['clean'], function(cb) {
-  console.log('clean')
+gulp.task('hexo-reload', function() {
+  browserSync({
+    proxy: 'localhost:4000'
+  });
+  
+  gulp.watch(['source/_posts/*.md', 'theme/**/*.ejs', 'theme/**/*.styl'], function(e) {
+    gulp.src(e.path)
+    .pipe($.wait(1000))
+    .pipe(reload({stream: true}));
+  });
 });
 
+gulp.task('hexo-server', $.shell.task(['hexo server']));
+gulp.task('hexo-generate', $.shell.task(['hexo generate']));
 
-gulp.task('generate', $.shell.task(['hexo generate']))
 gulp.task('copy', function() {
-  return gulp.src(['public/*'])
-    .pipe(gulp.dest('../dist'));
+  return gulp.src(['public/**/*'])
+    .pipe(gulp.dest('../'));
+});
+
+gulp.task('serve:dist', ['clean', 'hexo-generate'], function() {
+  browserSync({
+    notify: false,
+    server: {
+      baseDir: ['public']
+    }
+  });
 });
 
 gulp.task('publish', function() {
-  runSequence('clean', 'generate',['copy']);
+  runSequence('clean', 'hexo-generate',['copy']);
 });
+
+gulp.task('default', ['hexo-reload']);
