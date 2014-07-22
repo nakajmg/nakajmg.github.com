@@ -41,4 +41,6 @@ gulp.task('publish', function() {
   runSequence('clean', 'hexo-generate',['copy']);
 });
 
-gulp.task('default', ['hexo-reload']);
+gulp.task('atom', $.shell.task(['atom']));
+
+gulp.task('default', ['hexo-reload', 'atom']);
