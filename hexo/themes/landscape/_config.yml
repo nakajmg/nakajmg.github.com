@@ -10,7 +10,7 @@ excerpt_link: Read More
 fancybox: false
 
 # Sidebar
-sidebar: right
+sidebar: bottom
 widgets:
 - recent_posts
 - category

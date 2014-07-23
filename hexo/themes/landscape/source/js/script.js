@@ -61,8 +61,8 @@
             '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
             // '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
             '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-            '<a href="http://b.hatena.ne.jp/entry/' + encodedUrl + '" target="_blank" class="article-share-hatena">B!</a>',
-            '<a href="http://getpocket.com/edit?url=' + encodedUrl + '&title=' + title + '" target="_blank" class="article-share-pocket">P</a>',
+            '<a href="http://b.hatena.ne.jp/entry/' + encodedUrl + '" target="_blank" class="article-share-hatena" title="はてブ">B!</a>',
+            '<a href="http://getpocket.com/edit?url=' + encodedUrl + '&title=' + title + '" target="_blank" class="article-share-pocket" title="Pocket">P</a>',
           '</div>',
         '</div>'
       ].join('');

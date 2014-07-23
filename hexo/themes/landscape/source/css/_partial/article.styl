@@ -329,6 +329,7 @@ $article-share-link
   &:before
     content: "\f099"
   &:hover
+    color: #fff
     color: color-facebook
 
 .share-btn-github
@@ -352,6 +353,11 @@ $article-share-link
   &:hover
     color: #fff
     background-color: #EE4256
+    text-shadow: 0 1px darken(#EE4256, 20%)
+  @media screen and (max-width: breakpoint__smartphone)    
+    color: #fff
+    background-color: #EE4256
+    text-shadow: 0 1px darken(#EE4256, 20%)
     
 .article-share-hatena
   width: 50px
@@ -368,6 +374,11 @@ $article-share-link
   &:hover
     color: #fff
     background-color: #156fc3
+    text-shadow: 0 1px darken(#156fc3, 20%)
+  @media screen and (max-width: breakpoint__smartphone)    
+    color: #fff
+    background-color: #156fc3
+    text-shadow: 0 1px darken(#156fc3, 20%)
 
 .article-share-twitter
   @extend $article-share-link
@@ -376,7 +387,11 @@ $article-share-link
   &:hover
     background: color-twitter
     text-shadow: 0 1px darken(color-twitter, 20%)
-
+  @media screen and (max-width: breakpoint__smartphone)
+    color: #fff
+    background: color-twitter
+    text-shadow: 0 1px darken(color-twitter, 20%)
+  
 .article-share-facebook
   @extend $article-share-link
   &:before
@@ -384,7 +399,11 @@ $article-share-link
   &:hover
     background: color-facebook
     text-shadow: 0 1px darken(color-facebook, 20%)
-
+  @media screen and (max-width: breakpoint__smartphone)
+    color: #fff
+    background: color-facebook
+    text-shadow: 0 1px darken(color-facebook, 20%)
+    
 .article-share-pinterest
   @extend $article-share-link
   &:before
@@ -392,7 +411,11 @@ $article-share-link
   &:hover
     background: color-pinterest
     text-shadow: 0 1px darken(color-pinterest, 20%)
-
+  @media screen and (max-width: breakpoint__smartphone)
+    color: #fff
+    background: color-pinterest
+    text-shadow: 0 1px darken(color-pinterest, 20%)
+    
 .article-share-google
   @extend $article-share-link
   &:before
@@ -400,7 +423,11 @@ $article-share-link
   &:hover
     background: color-google
     text-shadow: 0 1px darken(color-google, 20%)
-
+  @media screen and (max-width: breakpoint__smartphone)
+    color: #fff
+    background: color-google
+    text-shadow: 0 1px darken(color-google, 20%)
+    
 .article-gallery
   display: none !important
   background: #000
@@ -456,7 +483,7 @@ $article-gallery-ctrl
     content: "\f054"
     right: 15px*/
 
-.fancybox
-  pointer-events: none !important
-a > img
-  pointer-events: none !important
+// .fancybox
+//   pointer-events: none !important
+// a > img
+//   pointer-events: none !important
