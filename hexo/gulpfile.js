@@ -20,6 +20,16 @@ gulp.task('hexo-reload', function() {
   });
 });
 
+// Optimize Images
+gulp.task('images', function () {
+  return gulp.src('public/img/**/*')
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('../img'))
+});
+
 gulp.task('hexo-server', $.shell.task(['hexo server']));
 gulp.task('hexo-generate', $.shell.task(['hexo generate']));
 
@@ -38,7 +48,7 @@ gulp.task('serve:dist', ['clean', 'hexo-generate'], function() {
 });
 
 gulp.task('publish', function() {
-  runSequence('clean', 'hexo-generate',['copy']);
+  runSequence('clean', 'hexo-generate',['copy'], 'images');
 });
 
 gulp.task('atom', $.shell.task(['atom']));
