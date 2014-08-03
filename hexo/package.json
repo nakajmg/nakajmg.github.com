@@ -15,7 +15,6 @@
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "*",
     "hexo-renderer-stylus": "*",
-    "imagemin": "^0.4.6",
     "opn": "^0.1.2",
     "require-dir": "^0.1.0",
     "run-sequence": "^0.3.6"
