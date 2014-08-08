@@ -644,6 +644,11 @@ body {
   line-height: 1.1em;
   margin: 1.1em 0;
 }
+.article-entry h2 {
+  border-bottom: 1px dashed rgba(0,0,0,0.2);
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
 .article-entry a {
   color: #258fb8;
   text-decoration: none;
