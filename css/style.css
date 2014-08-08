@@ -127,7 +127,7 @@ body {
   font: 16px "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
@@ -145,7 +145,7 @@ body {
 .outer:after {
   clear: both;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .outer {
     padding: 0 5px;
   }
@@ -313,7 +313,7 @@ body {
   height: 100px;
   position: relative;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #header {
     height: 40px;
   }
@@ -341,11 +341,11 @@ body {
   text-align: center;
   height: 40px;
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 0;
   margin-top: -20px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #header-title {
     top: 85%;
   }
@@ -362,7 +362,7 @@ body {
   letter-spacing: 2px;
   color: #999;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #logo {
     font-size: 30px;
   }
@@ -372,7 +372,7 @@ body {
   line-height: 16px;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #subtitle {
     font-size: 30px;
   }
@@ -384,7 +384,7 @@ body {
   float: left;
   margin-left: -15px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #main-nav {
     display: none;
   }
@@ -421,6 +421,7 @@ body {
 .main-nav-link {
   font-weight: 300;
   letter-spacing: 1px;
+  padding: 10px 15px;
 }
 @media screen and (max-width: 479px) {
   .main-nav-link {
@@ -442,7 +443,7 @@ body {
   float: right;
   margin-right: -15px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   #sub-nav {
     display: none;
   }
@@ -514,8 +515,30 @@ body {
 .search-form-submit:focus {
   color: #777;
 }
+.header-logoIimage {
+  height: 70px;
+}
+.header-logoIimage img {
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .header-logoIimage {
+    margin-top: -5px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #main {
+    margin-top: 20px;
+  }
+}
 .article {
   margin: 10px 0 40px;
+}
+@media screen and (max-width: 480px) {
+  .article {
+    margin-bottom: 20px;
+  }
 }
 .article-inner {
   overflow: hidden;
@@ -528,7 +551,7 @@ body {
 .article-meta:after {
   clear: both;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-date {
     font-size: 0.8em;
   }
@@ -550,9 +573,9 @@ body {
 .article-header {
   padding: 20px 20px 0;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-header {
-    padding: 10px 5px 0;
+    padding: 15px 10px 0;
   }
 }
 .article-title {
@@ -577,7 +600,7 @@ body {
 .article-title a:hover {
   color: #258fb8;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-title {
     font-size: 1.5em;
   }
@@ -594,7 +617,7 @@ body {
 .article-entry:after {
   clear: both;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-entry {
     padding: 0 10px;
   }
@@ -792,6 +815,12 @@ body {
 }
 .article-footer a:hover {
   color: #555;
+}
+@media screen and (max-width: 480px) {
+  .article-footer {
+    padding-top: 10px;
+    margin: 0 20px 10px;
+  }
 }
 .article-tag-list-item {
   float: left;
@@ -1014,7 +1043,7 @@ body {
   background-color: #ee4256;
   text-shadow: 0 1px #df142c;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-pocket {
     color: #fff;
     background-color: #ee4256;
@@ -1039,7 +1068,7 @@ body {
   background-color: #156fc3;
   text-shadow: 0 1px #11599c;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-hatena {
     color: #fff;
     background-color: #156fc3;
@@ -1053,7 +1082,7 @@ body {
   background: #00aced;
   text-shadow: 0 1px #008abe;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-twitter {
     color: #fff;
     background: #00aced;
@@ -1067,7 +1096,7 @@ body {
   background: #3b5998;
   text-shadow: 0 1px #2f477a;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-facebook {
     color: #fff;
     background: #3b5998;
@@ -1081,7 +1110,7 @@ body {
   background: #cb2027;
   text-shadow: 0 1px #a21a1f;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-pinterest {
     color: #fff;
     background: #cb2027;
@@ -1095,7 +1124,7 @@ body {
   background: #dd4b39;
   text-shadow: 0 1px #be3221;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .article-share-google {
     color: #fff;
     background: #dd4b39;
@@ -1226,6 +1255,11 @@ body {
 }
 #page-nav:after {
   clear: both;
+}
+@media screen and (max-width: 480px) {
+  #page-nav {
+    margin: 20px auto;
+  }
 }
 #page-nav a,
 #page-nav span {

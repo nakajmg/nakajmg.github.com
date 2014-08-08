@@ -41,7 +41,7 @@
   height: logo-size
   position: absolute
   // top: 50%
-  top: 70%
+  top: 55%
   left: 0
   margin-top: logo-size * -0.5
   @media screen and (max-width: breakpoint__smartphone)
@@ -107,6 +107,7 @@ $nav-link
   @extend $nav-link
   font-weight: 300
   letter-spacing: 1px
+  padding: 10px 15px
   @media mq-mobile
     display: none
 
@@ -179,3 +180,16 @@ $nav-link
   cursor: pointer
   &:hover, &:focus
     color: #777
+
+.header-logoIimage
+  height: 70px
+  img
+    height: 100%
+  
+  @media screen and (max-width: breakpoint__smartphone)
+    margin-top: -5px
+    height: 50px
+
+#main
+  @media screen and (max-width: breakpoint__smartphone)
+    margin-top: 20px
