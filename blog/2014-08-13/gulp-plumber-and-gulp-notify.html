@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>サイトいろいろいじった | じまぐてっく</title>
+  <title>gulp-plumberとgulp-notifyでデスクトップ通知を出す | じまぐてっく</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="いろいろいじった">
+  <meta name="description" content="gulpでwatch中にエラーが出たとき、ターミナルでエラーメッセージが出ててもなかなか気づけないので通知を出すようにした。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="サイトいろいろいじった">
-<meta property="og:url" content="http://nakajmg.github.io/blog/2013-11-08/blog-update.html">
+<meta property="og:title" content="gulp-plumberとgulp-notifyでデスクトップ通知を出す">
+<meta property="og:url" content="http://nakajmg.github.io/blog/2014-08-13/gulp-plumber-and-gulp-notify.html">
 <meta property="og:site_name" content="じまぐてっく">
-<meta property="og:description" content="いろいろいじった">
-<meta property="og:image" content="/img/tech.png">
+<meta property="og:description" content="gulpでwatch中にエラーが出たとき、ターミナルでエラーメッセージが出ててもなかなか気づけないので通知を出すようにした。">
+<meta property="og:image" content="/img/photo/2014-08-13.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="サイトいろいろいじった">
-<meta name="twitter:description" content="いろいろいじった">
+<meta name="twitter:title" content="gulp-plumberとgulp-notifyでデスクトップ通知を出す">
+<meta name="twitter:description" content="gulpでwatch中にエラーが出たとき、ターミナルでエラーメッセージが出ててもなかなか気づけないので通知を出すようにした。">
 <meta name="twitter:creator" content="@nakajmg">
   
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-blog-update" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-gulp-plumber-and-gulp-notify" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2013-11-08/blog-update.html" class="article-date">
-  <time datetime="2013-11-07T19:00:00.000Z" itemprop="datePublished">2013 11/08</time>
+    <a href="/blog/2014-08-13/gulp-plumber-and-gulp-notify.html" class="article-date">
+  <time datetime="2014-08-12T23:00:00.000Z" itemprop="datePublished">2014 08/13</time>
 </a>
     
   <div class="article-category">
@@ -91,7 +91,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      サイトいろいろいじった
+      gulp-plumberとgulp-notifyでデスクトップ通知を出す
     </h1>
   
 
@@ -100,35 +100,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>いろいろいじった</p>
+        <p><img src="/img/photo/2014-08-13.png" alt="gulp-plumber &amp; gulp-notify"></p>
+<p>gulpでwatch中にエラーが出たとき、ターミナルでエラーメッセージが出ててもなかなか気づけないので通知を出すようにした。</p>
 <a id="more"></a>
 
-<h3 id="OGP">OGP</h3>
-<p>この辺を参考に設定してみた</p>
+<p><code>gulpfile</code>の記述とか詳細はQiitaに投稿したのでこちらを参照。</p>
 <ul>
-<li><a href="https://cooltrainer.org/2013/08/13/getting-social-with-jekyll/" target="_blank" rel="external">Getting social with Jekyll</a></li>
-<li><a href="https://gist.github.com/pathawks/1406355" target="_blank" rel="external">pathawks / ogp.html</a></li>
-<li><a href="http://kawaken.github.io/memo/2013/08/30/OGP%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A8%E3%81%8BSNS%E9%96%A2%E4%BF%82%E3%81%AE%E3%81%A8%E3%81%93%E3%82%8D%E4%BF%AE%E6%AD%A3%E3%81%97%E3%81%9F.html" target="_blank" rel="external">OGPの設定とかSNS関係のところ修正した - Cazooro LAB</a></li>
+<li><a href="http://qiita.com/nakajmg/items/8add9c58ea28a8f31eed" target="_blank" rel="external">gulpタスク実行中にエラーが出たらデスクトップ通知を出す | Qiita</a></li>
 </ul>
-<h3 id="ソーシャルボタン">ソーシャルボタン</h3>
-<p><a href="https://github.com/Takazudo/jQuery.socialthings" target="_blank" rel="external">jQuery.socialthings</a>を使ってボタン追加してみた</p>
-<p>並びの余白とかを美しく揃えたい</p>
-<h3 id="なんか変なキャラつくった">なんか変なキャラつくった</h3>
-<p><img src="/img/tech.png" alt="/img/tech.png"></p>
-<p>てっくんと名づけました。目の前にあったぬいぐるみの影響を多分に受けています。</p>
-<p>最近少しずつイラレ力上達してる感ある。</p>
-<h3 id="れすぽんしぶ">れすぽんしぶ</h3>
-<p>読みやすいようにマージンとフォントサイズを調整した</p>
-<h3 id="あとは書くだけ">あとは書くだけ</h3>
-<p>設定終わったしなんか書かないとね</p>
+<h2 id="通知出すやつ">通知出すやつ</h2>
+<p>今回<code>gulp-notify</code>と<code>node-notifier</code>の2つを使ってみた。<code>gulp-notify</code>は<code>gulp-plumber</code>と組み合わせるにはベストな感じで何も考えず設定できる。</p>
+<p><a href="https://www.npmjs.org/package/node-notifier" target="_blank" rel="external">node-notifier</a>は<a href="https://github.com/alloy/terminal-notifier" target="_blank" rel="external">terminal-notifier</a>を使ってて細かい指定ができる。めんどくさくないなら<code>node-notifier</code>でタスク毎に通知をカスタマイズするとヨサソウ。</p>
+<h2 id="イベント監視する">イベント監視する</h2>
+<p>Qiitaの方には書かなかったけど、gulpのプラグインはだいたいエラーが起きたときには<code>this.emit(&#39;error&#39;, error)</code>みたいな感じで<code>error</code>イベントを発行してくれてる。どんなイベントを発行してるかは<code>node_modules</code>の中にあるプラグインのソースを直接読むのが早い。</p>
+<p>イベントのハンドリングは下記みたいな感じでハンドリングできる。(errorイベントに限らず)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);
+<span class="keyword">var</span> plumber = <span class="built_in">require</span>(<span class="string">'gulp-plumber'</span>);
+<span class="keyword">var</span> coffee = <span class="built_in">require</span>(<span class="string">'gulp-coffee'</span>);
+<span class="keyword">var</span> Notifier = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>);
+<span class="keyword">var</span> notifier = <span class="keyword">new</span> Notifier();
+
+gulp.task(<span class="string">'coffee'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+  <span class="keyword">return</span> gulp.src(<span class="string">'src/coffee/**/*.coffee'</span>)
+    .pipe(plumber()
+    .pipe(coffee().on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
+      notifier.notify({
+        message: error.message,
+        title: <span class="string">'coffee compile error'</span>,
+        sound: <span class="string">'Glass'</span>
+      });
+    }))
+  .pipe(gulp.dest(<span class="string">'app/assets/js'</span>);
+});
+</pre></td></tr></table></figure>
+
+<p>10行目に<code>coffee</code>のコンパイルを実行してて、そこで<code>.on</code>で<code>error</code>イベントが起こったときのハンドラを指定してる。こんな感じでイベントが起こったときの振る舞いを指定する。</p>
+<p>「このイベント欲しいのにな〜」と思ったらプラグインのソースのぞいて<code>.emit(&#39;hoge&#39;, hoge)</code>みたいなの足すのも手です。(環境変わると同じコード足さないと使えなくなるけど)</p>
+<p>環境、どんどん自分に最適化していきましょう。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nakajmg.github.io/blog/2013-11-08/blog-update.html" data-id="nrtrwcjqfaeygz3c" data-title="サイトいろいろいじった" class="article-share-link">Share</a>
+      <a data-url="http://nakajmg.github.io/blog/2014-08-13/gulp-plumber-and-gulp-notify.html" data-id="cwhi0cw7ptelw1sk" data-title="gulp-plumberとgulp-notifyでデスクトップ通知を出す" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jekyll/">jekyll</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
 
     </footer>
   </div>
@@ -136,19 +170,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2013-11-09/markupcafe2.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          マークアップの最適解はまだ見えない
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2013-10-25/first-post.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2014-08-08/future-from-webstarterkit.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Github Pages + Jekyllに移行してみた</div>
+      <div class="article-nav-title">Web Starter Kitが変えるWeb開発者の未来</div>
     </a>
   
 </nav>
