@@ -14,6 +14,8 @@ gulpでwatch中にエラーが出たとき、ターミナルでエラーメッ�
 
 * [gulpタスク実行中にエラーが出たらデスクトップ通知を出す | Qiita](http://qiita.com/nakajmg/items/8add9c58ea28a8f31eed)
 
+![notify](/img/photo/2014-08-13_2.gif)
+
 ## 通知出すやつ
 
 今回`gulp-notify`と`node-notifier`の2つを使ってみた。`gulp-notify`は`gulp-plumber`と組み合わせるにはベストな感じで何も考えず設定できる。
