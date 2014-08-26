@@ -663,6 +663,7 @@ body {
   margin-bottom: 1.6em;
   margin-left: 2em;
   margin-right: 0;
+  line-height: 2em;
 }
 .article-entry img,
 .article-entry video {
@@ -1352,8 +1353,14 @@ body {
 }
 .article-entry code {
   background: #eee;
-  text-shadow: 0 1px #fff;
+  text-shadow: 0 1px rgba(255,255,255,0.5);
   padding: 0 0.3em;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 90%;
+  margin: 0 2px;
+  vertical-align: top;
+  color: #3a3a3a;
 }
 .article-entry pre code {
   background: none;

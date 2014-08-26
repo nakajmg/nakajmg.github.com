@@ -43,7 +43,7 @@ gulp.task "serve:dist", [
 gulp.task "clean", del.bind(null, ["public"])
 
 gulp.task "hexo:generate", ->
-  exec("hexo", ["generate"])
+  spawn("hexo", ["generate"])
   
 gulp.task "copy", ->
   gulp.src(["public/**/*"]).pipe gulp.dest("../")

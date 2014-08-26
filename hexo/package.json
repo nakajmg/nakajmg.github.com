@@ -17,5 +17,8 @@
     "opn": "^0.1.2",
     "require-dir": "^0.1.0",
     "run-sequence": "^0.3.6"
+  },
+  "dependencies": {
+    "gulp-exec": "^2.1.0"
   }
 }

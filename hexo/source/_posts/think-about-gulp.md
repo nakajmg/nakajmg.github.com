@@ -76,7 +76,8 @@ $ gulp serve
 * gulp-plumber
 * browser-sync
 * gulp-autoprefixer
-* gulp-shell
+* ~~gulp-shell~~(duplecate)
+* gulp-exec
 * gulp-wait
 
 ローカルサーバとライブリロードがしたいなら`borwser-sync`だけあればいいでしょう。
