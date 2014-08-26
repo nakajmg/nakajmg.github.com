@@ -5,6 +5,7 @@ runSequence = require("run-sequence")
 browserSync = require("browser-sync")
 reload = browserSync.reload
 spawn = require("child_process").spawn
+exec = require("child_process").exec
 gutil = require("gulp-util")
 
 
@@ -40,7 +41,10 @@ gulp.task "serve:dist", [
 
 
 gulp.task "clean", del.bind(null, ["public"])
-gulp.task "hexo:generate", $.shell.task(["hexo generate"])
+
+gulp.task "hexo:generate", ->
+  exec("hexo", ["generate"])
+  
 gulp.task "copy", ->
   gulp.src(["public/**/*"]).pipe gulp.dest("../")
 
