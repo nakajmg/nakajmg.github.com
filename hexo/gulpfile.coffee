@@ -4,27 +4,30 @@ del = require("del")
 runSequence = require("run-sequence")
 browserSync = require("browser-sync")
 reload = browserSync.reload
-childp = require("child_process").exec
-
-gulp.task "clean", del.bind(null, ["public"])
-gulp.task "hexo:reload", ->
-  browserSync proxy: "localhost:4000"
-  gulp.watch [
-    "source/_posts/*.md"
-    "theme/**/*.ejs"
-    "theme/**/*.styl"
-  ], (e) ->
-    gulp.src(e.path).pipe($.wait(1000)).pipe reload(stream: true)
+spawn = require("child_process").spawn
+gutil = require("gulp-util")
 
 
-gulp.task "hexo:generate", $.shell.task(["hexo generate"])
-gulp.task "copy", ->
-  gulp.src(["public/**/*"]).pipe gulp.dest("../")
-
+# gulp.task "hexo:proxy", ->
+#   browserSync proxy: "localhost:4000"
 gulp.task "hexo:server", (cb) ->
-  childp "hexo server", (err) ->
-    return cb?(err) if err
-    cb?()
+  init = false
+  hexo = spawn("hexo", ["server"])
+  hexo.stdout.on "data", (data) ->
+    if !init
+      browserSync 
+        proxy: "localhost:4000"
+        notify: false
+      init = true
+    console.log "Hexo:#{data.toString('utf8')}"
+    setTimeout reload, 500
+  hexo.stderr.on "data", (data) ->
+    console.log "Hexo:#{data.toString('utf8')}"
+    setTimeout reload, 500
+
+gulp.task "hexo", [
+  "hexo:server"
+]
 
 gulp.task "serve:dist", [
   "clean"
@@ -36,13 +39,18 @@ gulp.task "serve:dist", [
       baseDir: ["public"]
 
 
+gulp.task "clean", del.bind(null, ["public"])
+gulp.task "hexo:generate", $.shell.task(["hexo generate"])
+gulp.task "copy", ->
+  gulp.src(["public/**/*"]).pipe gulp.dest("../")
+
 gulp.task "publish", ->
   runSequence "clean", "hexo:generate", ["copy"]
 
 
 gulp.task "atom", $.shell.task(["atom"])
+
 gulp.task "default", [
-  "hexo:server"
-  "hexo:reload"
+  "hexo"
   "atom"
 ]
