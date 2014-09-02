@@ -30,10 +30,7 @@ gulp.task "hexo", [
   "hexo:server"
 ]
 
-gulp.task "serve:dist", [
-  "clean"
-  "hexo:generate"
-], ->
+gulp.task "serve:dist", ->
   browserSync
     notify: false
     server:
@@ -43,13 +40,14 @@ gulp.task "serve:dist", [
 gulp.task "clean", del.bind(null, ["public"])
 
 gulp.task "hexo:generate", ->
-  spawn("hexo", ["generate"])
+  exec("hexo generate")
   
 gulp.task "copy", ->
-  gulp.src(["public/**/*"]).pipe gulp.dest("../")
+  gulp.src(["./public/**/*"])
+    .pipe gulp.dest("../")
 
 gulp.task "publish", ->
-  runSequence "clean", "hexo:generate", ["copy"]
+  runSequence "clean", "hexo:generate", "copy"
 
 
 gulp.task "atom", $.shell.task(["atom"])
