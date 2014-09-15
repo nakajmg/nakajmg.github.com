@@ -66,7 +66,7 @@ gulp.task('reset', ->
     stderr: true
     stdout: true
       
-  gulp.src(['./**/**', 'node_modules'])
+  gulp.src(['./**/**', '!./node_modules'])
     .pipe($.using())
     .pipe($.exec('git checkout <%= file.path %>', continueOnError: true ))
     .pipe($.exec.reporter(reportOptions))
