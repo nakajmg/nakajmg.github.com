@@ -39,8 +39,12 @@ gulp.task "serve:dist", ->
 
 gulp.task "clean", del.bind(null, ["public"])
 
-gulp.task "hexo:generate", ->
-  exec("hexo generate")
+gulp.task "hexo:generate", (cb)->
+  exec("hexo generate", (err, stdout, stderr)->
+    console.log stdout
+    console.log stderr
+    cb(err)
+  )
   
 gulp.task "copy", ->
   gulp.src(["./public/**/*"])
@@ -49,8 +53,23 @@ gulp.task "copy", ->
 gulp.task "publish", ->
   runSequence "clean", "hexo:generate", "copy"
 
+gulp.task "atom", (cb)->
+  exec("atom", (err, stdout, stderr)->
+    console.log stdout
+    console.log stderr
+    cb(err)
+  )
 
-gulp.task "atom", $.shell.task(["atom"])
+gulp.task('reset', ->
+  reportOptions =
+    err: true
+    stderr: true
+    stdout: true
+      
+  gulp.src('./**/**')
+    .pipe($.exec('git checkout <%= file.path %>'))
+    .pipe($.exec.reporter(reportOptions))
+}
 
 gulp.task "default", [
   "hexo"
