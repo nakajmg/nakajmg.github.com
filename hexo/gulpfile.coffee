@@ -67,6 +67,7 @@ gulp.task('reset', ->
     stdout: true
       
   gulp.src('./**/**')
+    .pipe($.using())
     .pipe($.exec('git checkout <%= file.path %>'))
     .pipe($.exec.reporter(reportOptions))
 )
