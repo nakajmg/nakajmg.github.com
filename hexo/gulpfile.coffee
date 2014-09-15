@@ -69,7 +69,7 @@ gulp.task('reset', ->
   gulp.src('./**/**')
     .pipe($.exec('git checkout <%= file.path %>'))
     .pipe($.exec.reporter(reportOptions))
-}
+)
 
 gulp.task "default", [
   "hexo"
