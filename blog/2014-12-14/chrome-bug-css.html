@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: CodeGrid | じまぐてっく</title>
+  <title>MacのChromeで表示がおかしくなるCSS | じまぐてっく</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="じまぐてっく">
-<meta property="og:url" content="http://nakajmg.github.io/tags/CodeGrid/">
+  <meta name="description" content="CSS珍百景 Calendar 2014 14日目の記事です。
+案件でハマったCSSのバグです。MacのChromeでしか起こらないと思います。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacのChromeで表示がおかしくなるCSS">
+<meta property="og:url" content="http://nakajmg.github.io/blog/2014-12-14/chrome-bug-css.html">
 <meta property="og:site_name" content="じまぐてっく">
-<meta property="og:description">
+<meta property="og:description" content="CSS珍百景 Calendar 2014 14日目の記事です。
+案件でハマったCSSのバグです。MacのChromeでしか起こらないと思います。">
+<meta property="og:image" content="/img/photo/2014-12-14.jpg">
+<meta property="og:image" content="/img/photo/2014-12-14_01.png">
+<meta property="og:image" content="/img/photo/2014-12-14_02.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="じまぐてっく">
-<meta name="twitter:description">
+<meta name="twitter:title" content="MacのChromeで表示がおかしくなるCSS">
+<meta name="twitter:description" content="CSS珍百景 Calendar 2014 14日目の記事です。
+案件でハマったCSSのバグです。MacのChromeでしか起こらないと思います。">
 <meta name="twitter:creator" content="@nakajmg">
 
   
@@ -75,16 +81,14 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-codegrid-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-chrome-bug-css" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2014-10-09/codegrid-gulp.html" class="article-date">
-  <time datetime="2014-10-09T14:00:00.000Z" itemprop="datePublished">2014 10/09</time>
+    <a href="/blog/2014-12-14/chrome-bug-css.html" class="article-date">
+  <time datetime="2014-12-13T15:00:00.000Z" itemprop="datePublished">2014 12/14</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
   </div>
 
   </div>
@@ -94,8 +98,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name" class="article-title">
-      <a href="/blog/2014-10-09/codegrid-gulp.html">gulpの入門記事を書いたよ</a>
+    <h1 class="article-title" itemprop="name">
+      MacのChromeで表示がおかしくなるCSS
     </h1>
   
 
@@ -104,34 +108,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/img/photo/2014-10-09.png" alt="CodeGrid"></p>
-<p>たまには宣伝！</p>
-<p>弊社のフロントエンジニアがお届けしているフロントエンド関連の技術情報有料配信サービス「<a href="https://app.codegrid.net/" target="_blank" rel="external">CodeGrid</a>」にてgulpの連載を全5回で書きました。</p>
-<p><a href="https://app.codegrid.net/entry/gulp-1" target="_blank" rel="external">第1回</a>は無料で読めます。</p>
-<p>ということで内容紹介です。</p>
+        <p><img src="/img/photo/2014-12-14.jpg" alt=""></p>
+<p><a href="http://www.adventar.org/calendars/341" target="_blank" rel="external">CSS珍百景 Calendar 2014</a> 14日目の記事です。</p>
+<p>案件でハマったCSSのバグです。MacのChromeでしか起こらないと思います。</p>
+<a id="more"></a>
 
-        
-          <p class="article-more-link">
-            <a href="/blog/2014-10-09/codegrid-gulp.html">Read More</a>
-          </p>
-        
+
+<h2 id="デモ">デモ</h2>
+<p>まずこちらのpenをご覧ください。</p>
+<p><a href="http://codepen.io/nakajmg/pen/bNVQNg" target="_blank" rel="external">http://codepen.io/nakajmg/pen/bNVQNg</a></p>
+<h2 id="事象">事象</h2>
+<p>公開するときに直ってたらアレなので以下にSSを。</p>
+<p>正常な状態。switchボタンを2回押すと…</p>
+<p><img src="/img/photo/2014-12-14_01.png" alt="正常"></p>
+<p>＿人人人人人人人人人人人＿<br>＞　表示がおかしくなる　＜<br>￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣</p>
+<p><img src="/img/photo/2014-12-14_02.png" alt="変"></p>
+<p>表示されないといけないとこが背景色と一緒になる…</p>
+<p>ブラウザをリサイズしたりして強制的にリドロー的なの起こすと直る。</p>
+<h2 id="原因推測">原因推測</h2>
+<p>たぶんスクロールバーが起因でこの表示崩れ？が起こっていると思う。ボタンを押して切り替えたときに隠れてる要素は縦が長いのでスクロールバーが出てる。一方最初に表示されている方はスクロールバーが出ていない。この状況で<code>display</code>の切り替えで表示のオンオフを行うとレンダーするときにおかしくなる、と推測。</p>
+<h2 id="対処">対処</h2>
+<p><code>height</code>いじってなんか直した（覚えてない）</p>
+<hr>
+<p>特定のOS+特定のブラウザっていう良くないやつなので早く直りますように。</p>
+<p>現場からは以上です。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nakajmg.github.io/blog/2014-10-09/codegrid-gulp.html" data-id="xunws0aowkekcdof" data-title="gulpの入門記事を書いたよ" class="article-share-link">Share</a>
+      <a data-url="http://nakajmg.github.io/blog/2014-12-14/chrome-bug-css.html" data-id="27k3o5ooz2qnivzu" data-title="MacのChromeで表示がおかしくなるCSS" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CodeGrid/">CodeGrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
-
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2014-12-04/cssconf-and-jsconf-asia.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSSConf.AsiaとJSConf.Asiaと私</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-  
-  
 </section>
         
       </div>
