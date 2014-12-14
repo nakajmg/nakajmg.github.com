@@ -45,6 +45,17 @@ http://codepen.io/nakajmg/pen/bNVQNg
 
 `height`いじってなんか直した（覚えてない）
 
+※ 追記
+
+`backface-visibility: hidden;`を設定すると起こらない。
+
+http://codepen.io/nakajmg/pen/yyOKZK
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p><a href="https://twitter.com/nakajmg">@nakajmg</a> これ.innerに-webkit-backface-visibility: hidden;で解決できます。macのchromeだけアニメーションや描画などの処理がおかしい時はこれ使うと対処が可能のようです。</p>&mdash; たんしお (@_tanshio) <a href="https://twitter.com/_tanshio/status/543813364569214976">December 13, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+`backface-visibility`の初期値はどのブラウザでも`visible`なんだけど、起こるのはChromeだけ。Blinkのバグぽい。
+
 ---
 
 特定のOS+特定のブラウザっていう良くないやつなので早く直りますように。

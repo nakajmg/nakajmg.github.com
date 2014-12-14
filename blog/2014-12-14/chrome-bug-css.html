@@ -129,6 +129,13 @@
 <p>たぶんスクロールバーが起因でこの表示崩れ？が起こっていると思う。ボタンを押して切り替えたときに隠れてる要素は縦が長いのでスクロールバーが出てる。一方最初に表示されている方はスクロールバーが出ていない。この状況で<code>display</code>の切り替えで表示のオンオフを行うとレンダーするときにおかしくなる、と推測。</p>
 <h2 id="対処">対処</h2>
 <p><code>height</code>いじってなんか直した（覚えてない）</p>
+<p>※ 追記</p>
+<p><code>backface-visibility: hidden;</code>を設定すると起こらない。</p>
+<p><a href="http://codepen.io/nakajmg/pen/yyOKZK" target="_blank" rel="external">http://codepen.io/nakajmg/pen/yyOKZK</a></p>
+<p><blockquote class="twitter-tweet" data-partner="tweetdeck"><p><a href="https://twitter.com/nakajmg" target="_blank" rel="external">@nakajmg</a> これ.innerに-webkit-backface-visibility: hidden;で解決できます。macのchromeだけアニメーションや描画などの処理がおかしい時はこれ使うと対処が可能のようです。</p>&mdash; たんしお (@_tanshio) <a href="https://twitter.com/_tanshio/status/543813364569214976" target="_blank" rel="external">December 13, 2014</a></blockquote></p>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><code>backface-visibility</code>の初期値はどのブラウザでも<code>visible</code>なんだけど、起こるのはChromeだけ。Blinkのバグぽい。</p>
 <hr>
 <p>特定のOS+特定のブラウザっていう良くないやつなので早く直りますように。</p>
 <p>現場からは以上です。</p>
