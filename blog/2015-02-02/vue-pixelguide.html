@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: node | じまぐてっく</title>
+  <title>PixelGuideをVue.jsで書きなおしてる | じまぐてっく</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="じまぐてっく">
-<meta property="og:url" content="http://nakajmg.github.io/tags/node/">
+  <meta name="description" content="ちょうど1年前くらいに作ったPixelGuideをVue.jsで書きなおし始めた。
+書きなおそうと思ったきっかけはCodeGridでVue.jsの連載を始めるにあたって色々試す題材としてヨサソウだと思ったので。
+ガイドの追加機能までできたやつのデモ（Chromeだけ動く）＝＞Vue-PixelGuide demo。
+操作方法
+ルーラー上でクリックするとガイド追加、そのままドラッグして位置変更。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PixelGuideをVue.jsで書きなおしてる">
+<meta property="og:url" content="http://nakajmg.github.io/blog/2015-02-02/vue-pixelguide.html">
 <meta property="og:site_name" content="じまぐてっく">
-<meta property="og:description">
+<meta property="og:description" content="ちょうど1年前くらいに作ったPixelGuideをVue.jsで書きなおし始めた。
+書きなおそうと思ったきっかけはCodeGridでVue.jsの連載を始めるにあたって色々試す題材としてヨサソウだと思ったので。
+ガイドの追加機能までできたやつのデモ（Chromeだけ動く）＝＞Vue-PixelGuide demo。
+操作方法
+ルーラー上でクリックするとガイド追加、そのままドラッグして位置変更。">
+<meta property="og:image" content="/img/photo/2014-3-1.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="じまぐてっく">
-<meta name="twitter:description">
+<meta name="twitter:title" content="PixelGuideをVue.jsで書きなおしてる">
+<meta name="twitter:description" content="ちょうど1年前くらいに作ったPixelGuideをVue.jsで書きなおし始めた。
+書きなおそうと思ったきっかけはCodeGridでVue.jsの連載を始めるにあたって色々試す題材としてヨサソウだと思ったので。
+ガイドの追加機能までできたやつのデモ（Chromeだけ動く）＝＞Vue-PixelGuide demo。
+操作方法
+ルーラー上でクリックするとガイド追加、そのままドラッグして位置変更。">
 <meta name="twitter:creator" content="@nakajmg">
 
   
@@ -75,16 +88,14 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-gulp-structure" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vue-pixelguide" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2014-09-03/gulp-structure.html" class="article-date">
-  <time datetime="2014-09-02T16:00:00.000Z" itemprop="datePublished">2014 09/03</time>
+    <a href="/blog/2015-02-02/vue-pixelguide.html" class="article-date">
+  <time datetime="2015-02-01T16:00:00.000Z" itemprop="datePublished">2015 02/02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
+    <a class="article-category-link" href="/categories/tech/">tech</a>►<a class="article-category-link" href="/categories/tech/CodeGrid/">CodeGrid</a>
   </div>
 
   </div>
@@ -94,8 +105,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name" class="article-title">
-      <a href="/blog/2014-09-03/gulp-structure.html">gulpのアプローチ &quot;なぜグローバルとローカルにインストールが必要なのか&quot;</a>
+    <h1 class="article-title" itemprop="name">
+      PixelGuideをVue.jsで書きなおしてる
     </h1>
   
 
@@ -104,31 +115,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/img/photo/2014-09-03.png" alt="gulp srtucture"></p>
-<p><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" target="_blank" rel="external">gulpのGetting Started</a>にもあるように、gulpを使うにはグローバルインストールとローカルインストールが必要になる。なんで同じものを2つインストールするのか、不思議に思ってソース読んで「へー」と思ったのでまとめてみる。</p>
+        <p><img src="/img/photo/2014-3-1.png" alt=""></p>
+<p>ちょうど1年前くらいに作った<a href="/blog/2014-03-01/pixelguide.html">PixelGuide</a>を<a href="http://vuejs.org/" target="_blank" rel="external">Vue.js</a>で書きなおし始めた。</p>
+<p>書きなおそうと思ったきっかけは<a href="https://app.codegrid.net/" target="_blank" rel="external">CodeGrid</a>でVue.jsの連載を始めるにあたって色々試す題材としてヨサソウだと思ったので。</p>
+<p>ガイドの追加機能までできたやつのデモ（Chromeだけ動く）＝＞<a href="https://nakajmg.github.io/Vue-PixelGuide/demo/" target="_blank" rel="external">Vue-PixelGuide demo</a>。</p>
+<h3 id="操作方法">操作方法</h3>
+<p>ルーラー上でクリックするとガイド追加、そのままドラッグして位置変更。</p>
+<a id="more"></a>
 
-        
-          <p class="article-more-link">
-            <a href="/blog/2014-09-03/gulp-structure.html">Read More</a>
-          </p>
-        
+<h2 id="もとのやつ">もとのやつ</h2>
+<p>元々のはガイドを引く部分が全部ライブラリまかせで、それをラップして拡張にしている感じ。拡張メニューの部分とのやりとりにjQuery使っててめちゃくちゃ汚い。</p>
+<h2 id="Vue-js版">Vue.js版</h2>
+<p>ライブラリは使わず。</p>
+<p>ルーラーの表示もViewModelでやっててリサイズで伸縮するようになっている。ガイドの追加はViewModelのデータにクリックされた座標を追加するだけな感じ。</p>
+<h2 id="ヨサ">ヨサ</h2>
+<p>Vue.jsに限らずデータバインディングが使えると本当に楽。「要素を作ってイベント張って値を入れて…」とか「クリックしたらこいつにイベント飛ばしてこっちの値を変更して表示を変えて…」みたいな処理を書く必要がほとんどない。</p>
+<h2 id="ヨクナサ">ヨクナサ</h2>
+<p>Vue.jsは同じことやるにも異なる記述ができて自由すぎる感がある。適当にガーッって書いても動くんだけど、コンポーネント分割したりパーシャルにしたりイベントハンドリングだったり、もうちょい制限してくれたほうが色々やりやすい気がする。</p>
+<p>一人で書いてるぶんには「ブレてる」で済むんだけど、これが複数人で使うってなると結局規約的なの作る必要あって、フレームワークは制約が厳しいほうがよいのでは、と思いはじめそうになっている。</p>
+<h2 id="でもね">でもね</h2>
+<p>こうかな？って書き方すると思ったとおりに動くのでVue.js好きです。大きいアプリに使うにはかなり知見が必要なんだけど趣味でパパッと動くもの作るにはとてもヨイです。</p>
+<h2 id="それでは">それでは</h2>
+<p><a href="https://app.codegrid.net/" target="_blank" rel="external">CodeGrid</a>で「<a href="https://app.codegrid.net/entry/vue-1" target="_blank" rel="external">Vue.jsを使いこなす</a>」という連載が始まりましたのでよければ購読よろしくおねがいします。無料記事も50以上あるので一度読んでみてください。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nakajmg.github.io/blog/2014-09-03/gulp-structure.html" data-id="xv1ufs2op2q5odcx" data-title="gulpのアプローチ "なぜグローバルとローカルにインストールが必要なのか"" class="article-share-link">Share</a>
+      <a data-url="http://nakajmg.github.io/blog/2015-02-02/vue-pixelguide.html" data-id="yuhb2clnl5dj25qh" data-title="PixelGuideをVue.jsで書きなおしてる" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
-
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2014-12-31/2014matome.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2014年のおわりに</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-  
-  
 </section>
         
       </div>
